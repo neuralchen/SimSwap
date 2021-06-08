@@ -11,6 +11,8 @@ Currently only the test code is available, training scripts are coming soon
 ## Results
 ![Results1](/doc/img/results1.PNG)
 
+![Results2](/doc/img/total.PNG)
+
 ## Video
 <img src="./doc/img/video.webp"/>
 
