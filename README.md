@@ -12,7 +12,7 @@ Currently only the test code is available, training scripts are coming soon
 ![Results1](/doc/img/results1.PNG)
 
 ## Video
-<img src="./docs/img/video.webp"  style="zoom: 20%;" />
+<img src="./doc/img/video.webp"/>
 
 **High-quality videos can be found in the link below:**
 
