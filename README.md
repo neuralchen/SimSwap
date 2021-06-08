@@ -30,19 +30,16 @@ Currently only the test code is available, training scripts are coming soon
 
 
 ## Usage
-
-Use python3.5, pytorch1.3.0
-
-
-Use this command to test the face swapping between two images:
-
+### To test the pretrained model
+```
 python test_one_image.py --isTrain false  --name people --Arc_path models/BEST_checkpoint.tar --pic_a_path crop_224/mars.jpg --pic_b_path crop_224/ds.jpg --output_path output/
+```
 
 --name refers to the checkpoint name.
 
 ## Pretrained model
 [[Google Drive]](https://dl.acm.org/doi/10.1145/3394171.3413630)
-[[Baidu Drive]](https://dl.acm.org/doi/10.1145/3394171.3413630)
+[[Baidu Drive]](https://pan.baidu.com/s/1wFV11RVZMHqd-ky4YpLdcA) Password: ```jd2v```
 
 
 ## To cite our paper
