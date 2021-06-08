@@ -2,7 +2,7 @@
 ## Proceedings of the 28th ACM International Conference on Multimedia
 **The official repository with Pytorch**
 
-Currently only the test code is available, training scripts are coming soon
+Currently, only the test code is available, and training scripts are coming soon
 
 [[Conference paper]](https://dl.acm.org/doi/10.1145/3394171.3413630)
 
