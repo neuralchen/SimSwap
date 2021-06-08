@@ -14,6 +14,8 @@ Currently only the test code is available, training scripts are coming soon
 ## Video
 <img src="./docs/img/video.webp"  style="zoom: 20%;" />
 
+**High-quality videos can be found in the link below:**
+
 [[Baidu Drive link for video]](https://pan.baidu.com/s/1WTS6jm2TY17bYJurw57LUg ) Password: ```b26n```
 
 ## Dependencies
