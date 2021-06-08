@@ -1,6 +1,7 @@
 # SimSwap: An Efficient Framework For High Fidelity Face Swapping
 ## Proceedings of the 28th ACM International Conference on Multimedia
 **The official repository with Pytorch**
+
 Currently only the test code is available, training scripts are coming soon
 
 [[Conference paper]](https://dl.acm.org/doi/10.1145/3394171.3413630)
@@ -11,8 +12,18 @@ Currently only the test code is available, training scripts are coming soon
 ![Results1](/doc/img/results1.PNG)
 
 ## Video
+<img src="./docs/img/video.webp"  style="zoom: 20%;" />
+
+[[Baidu Drive link for video]](https://pan.baidu.com/s/1WTS6jm2TY17bYJurw57LUg ) Password: ```b26n```
 
 ## Dependencies
+- python3.6+
+- pytorch1.5+
+- torchvision
+- opencv
+- pillow
+- numpy
+
 
 ## Usage
 
@@ -24,6 +35,10 @@ Use this command to test the face swapping between two images:
 python test_one_image.py --isTrain false  --name people --Arc_path models/BEST_checkpoint.tar --pic_a_path crop_224/mars.jpg --pic_b_path crop_224/ds.jpg --output_path output/
 
 --name refers to the checkpoint name.
+
+## Pretrained model
+[[Google Drive]](https://dl.acm.org/doi/10.1145/3394171.3413630)
+[[Baidu Drive]](https://dl.acm.org/doi/10.1145/3394171.3413630)
 
 
 ## To cite our paper
