@@ -50,7 +50,7 @@ There are two archive files in the drive: **checkpoints.zip** and **arcface_chec
 - **Copy the arcface_checkpoint.tar into ./arcface_model**
 - **Unzip checkpoints.zip, place it in the root dir ./**
 
-[[Google Drive]](https://dl.acm.org/doi/10.1145/3394171.3413630)
+[[Google Drive]](https://drive.google.com/drive/folders/1jV6_0FIMPC53FZ2HzZNJZGMe55bbu17R?usp=sharing)
 
 [[Baidu Drive]](https://pan.baidu.com/s/1wFV11RVZMHqd-ky4YpLdcA) Password: ```jd2v```
 
