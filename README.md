@@ -9,7 +9,7 @@ Currently, only the test code is available, and training scripts are coming soon
 [[Google Drive Paper link]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing)
 
 
-[[Baidu Drive Paper link]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``
+[[Baidu Drive Paper link]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt```
 
 
 
