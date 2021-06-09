@@ -1,0 +1,17 @@
+--- /usr/local/lib/python3.5/dist-packages/torch/nn/modules/pooling.py
++++ /usr/local/lib/python3.5/dist-packages/torch/nn/modules/pooling.py
+@@ -57,12 +57,8 @@
+         https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md
+     """
+ 
+-    kernel_size: _size_2_t
+-    stride: _size_2_t
+-    padding: _size_2_t
+-    dilation: _size_2_t
+-
+-    def forward(self, input: Tensor) -> Tensor:
++    @weak_script_method
++    def forward(self, input):
+         return F.max_pool2d(input, self.kernel_size, self.stride,
+                             self.padding, self.dilation, self.ceil_mode,
+                             self.return_indices)

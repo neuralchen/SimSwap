@@ -1,0 +1,22 @@
+--- /usr/local/lib/python3.5/dist-packages/torch/nn/modules/dropout.py
++++ /usr/local/lib/python3.5/dist-packages/torch/nn/modules/dropout.py
+@@ -18,8 +18,8 @@
+         inplace: If set to ``True``, will do this operation in-place. Default: ``False``
+ 
+     Shape:
+-        - Input: :math:`(*)`. Input can be of any shape
+-        - Output: :math:`(*)`. Output is of the same shape as input
++        - Input: `Any`. Input can be of any shape
++        - Output: `Same`. Output is of the same shape as input
+ 
+     Examples::
+ 
+@@ -31,6 +31,7 @@
+         detectors: https://arxiv.org/abs/1207.0580
+     """
+ 
+-    def forward(self, input: Tensor) -> Tensor:
++    @weak_script_method
++    def forward(self, input):
+         return F.dropout(input, self.p, self.training, self.inplace)
+ 

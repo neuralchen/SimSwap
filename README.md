@@ -32,12 +32,19 @@ Currently, only the test code is available, and training scripts are coming soon
 ## Usage
 ### To test the pretrained model
 ```
-python test_one_image.py --isTrain false  --name people --Arc_path models/BEST_checkpoint.tar --pic_a_path crop_224/mars.jpg --pic_b_path crop_224/ds.jpg --output_path output/
+python test_one_image.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path crop_224/6.jpg --pic_b_path crop_224/ds.jpg --output_path output/
 ```
 
---name refers to the checkpoint name.
+--name refers to the SimSwap training logs name.
 
 ## Pretrained model
+
+### Usage
+There are two archive files in the drive: **checkpoints.zip** and **arcface_checkpoint.tar**
+
+- **Copy the arcface_checkpoint.tar into ./arcface_model**
+- **Unzip checkpoints.zip, place it in the root dir ./**
+
 [[Google Drive]](https://dl.acm.org/doi/10.1145/3394171.3413630)
 
 [[Baidu Drive]](https://pan.baidu.com/s/1wFV11RVZMHqd-ky4YpLdcA) Password: ```jd2v```
