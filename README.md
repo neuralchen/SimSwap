@@ -23,9 +23,14 @@ Currently, only the test code is available, and training scripts are coming soon
 
 **High-quality videos can be found in the link below:**
 
-[[Google Drive link for video]](https://drive.google.com/file/d/1hdne7Gw39d34zt3w1NYV3Ln5cT8PfCNm/view?usp=sharing)
+[[Google Drive link for video 1]](https://drive.google.com/file/d/1hdne7Gw39d34zt3w1NYV3Ln5cT8PfCNm/view?usp=sharing)
+
+[[Google Drive link for video 2]](https://drive.google.com/file/d/1oftHAnLmgFis4XURcHTccGSWbWSXYKK1/view?usp=sharing)
 
 [[Baidu Drive link for video]](https://pan.baidu.com/s/1WTS6jm2TY17bYJurw57LUg ) Password: ```b26n```
+
+[[Online Video]](https://www.bilibili.com/video/BV12v411p7j5/)
+
 
 ## Dependencies
 - python3.6+

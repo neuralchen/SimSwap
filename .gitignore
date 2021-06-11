@@ -132,3 +132,6 @@ checkpoints/
 *.tar
 *.zip
 *.patch
+*.zip
+*.avi
+*.pdf
