@@ -4,6 +4,8 @@
 
 Currently, only the test code is available, and training scripts are coming soon
 
+[[Arxiv paper]](https://arxiv.org/pdf/2106.06340v1.pdf)
+
 [[ACM DOI paper]](https://dl.acm.org/doi/10.1145/3394171.3413630)
 
 [[Google Drive Paper link]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing)
