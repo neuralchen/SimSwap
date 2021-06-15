@@ -3,6 +3,8 @@
 **The official repository with Pytorch**
 
 Currently, only the test code is available, and training scripts are coming soon
+![simswap_logo](/doc/img/logo1.png)
+
 
 [[Arxiv paper]](https://arxiv.org/pdf/2106.06340v1.pdf)
 
