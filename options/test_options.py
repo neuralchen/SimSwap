@@ -18,5 +18,6 @@ class TestOptions(BaseOptions):
         self.parser.add_argument("--pic_a_path", type=str, default='crop_224/gdg.jpg', help="people a")
         self.parser.add_argument("--pic_b_path", type=str, default='crop_224/zrf.jpg', help="people b")
         self.parser.add_argument("--output_path", type=str, default='output/', help="people b")
+        self.parser.add_argument("--video_path",type=str,help="people b video")
 
         self.isTrain = False
