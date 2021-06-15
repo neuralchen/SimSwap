@@ -3,7 +3,7 @@
 **The official repository with Pytorch**
 
 Currently, only the test code is available, and training scripts are coming soon
-![simswap_logo](/doc/img/logo1.png)
+[![simswaplogo](/doc/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
 
 [[Arxiv paper]](https://arxiv.org/pdf/2106.06340v1.pdf)
@@ -94,4 +94,19 @@ There are two archive files in the drive: **checkpoints.zip** and **arcface_chec
 
 [![title](/doc/img/title.png)](https://github.com/neuralchen/ASMAGAN)
 
-Learn about our other projects [[RainNet]](https://neuralchen.github.io/RainNet), [[Sketch Generation]](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale), [[CooGAN]](https://github.com/neuralchen/CooGAN), [[Knowledge Style Transfer]](https://github.com/AceSix/Knowledge_Transfer), [[SimSwap]](https://github.com/neuralchen/SimSwap),[[ASMA-GAN]](https://github.com/neuralchen/ASMAGAN),[[Pretrained_VGG19]](https://github.com/neuralchen/Pretrained_VGG19).
+Learn about our other projects 
+[[RainNet]](https://neuralchen.github.io/RainNet);
+
+[[Sketch Generation]](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale);
+
+[[CooGAN]](https://github.com/neuralchen/CooGAN);
+
+[[Knowledge Style Transfer]](https://github.com/AceSix/Knowledge_Transfer);
+
+[[SimSwap]](https://github.com/neuralchen/SimSwap);
+
+[[ASMA-GAN]](https://github.com/neuralchen/ASMAGAN);
+
+[[SNGAN-Projection-pytorch]](https://github.com/neuralchen/SNGAN_Projection)
+
+[[Pretrained_VGG19]](https://github.com/neuralchen/Pretrained_VGG19).
