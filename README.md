@@ -15,10 +15,10 @@ Currently, only the test code is available, and training scripts are coming soon
 
 [[Baidu Drive Paper link]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt```
 
-![video2](/doc/img/simswap6.gif)
-![video3](/doc/img/chenglong.gif)
-![video4](/doc/img/zhoujielun.gif)
-![video5](/doc/img/zhuyin.gif)
+![video2](/doc/img/anni.webp)
+![video3](/doc/img/chenglong.webp)
+![video4](/doc/img/zhoujielun.webp)
+![video5](/doc/img/zhuyin.webp)
 
 ## Results
 ![Results1](/doc/img/results1.PNG)
