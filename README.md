@@ -25,6 +25,9 @@ Currently, only the test code is available, and training scripts are coming soon
 ## Video
 <img src="./doc/img/video.webp"/>
 
+
+<img src="./doc/img/njt7d-k3pqx.webp"/>
+
 **High-quality videos can be found in the link below:**
 
 [[Mama(video) 1080p]](https://drive.google.com/file/d/1JTruy6BTnT1EK1PSaZ4x-F8RhtZU_kT3/view?usp=sharing)
