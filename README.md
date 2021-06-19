@@ -17,7 +17,8 @@ Currently, only the test code is available, and training scripts are coming soon
 
 ![video2](/doc/img/njt7d-k3pqx.webp)
 ![video3](/doc/img/hevpz-kjnkh.webp)
-![video3](/doc/img/w6ol6-cucqh.webp)
+![video4](/doc/img/w6ol6-cucqh.webp)
+![video5](/doc/img/zhuyin.webp)
 
 ## Results
 ![Results1](/doc/img/results1.PNG)
