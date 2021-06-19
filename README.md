@@ -27,7 +27,7 @@ Currently, only the test code is available, and training scripts are coming soon
 
 **High-quality videos can be found in the link below:**
 
-[[Mama(video)]](https://drive.google.com/file/d/1BXuVjBUfREK0Ejehnkib3zZOk8uPQMzm/view?usp=sharing)
+[[Mama(video) 1080p]](https://drive.google.com/file/d/1JTruy6BTnT1EK1PSaZ4x-F8RhtZU_kT3/view?usp=sharing)
 
 [[Google Drive link for video 1]](https://drive.google.com/file/d/1hdne7Gw39d34zt3w1NYV3Ln5cT8PfCNm/view?usp=sharing)
 
