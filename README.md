@@ -17,6 +17,9 @@ Currently, only the test code is available, and training scripts are coming soon
 
 
 
+<img src="./doc/img/njt7d-k3pqx.webp"/>
+
+
 ## Results
 ![Results1](/doc/img/results1.PNG)
 
@@ -26,7 +29,6 @@ Currently, only the test code is available, and training scripts are coming soon
 <img src="./doc/img/video.webp"/>
 
 
-<img src="./doc/img/njt7d-k3pqx.webp"/>
 
 **High-quality videos can be found in the link below:**
 
