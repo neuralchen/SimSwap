@@ -63,6 +63,7 @@ Currently, only the test code is available, and training scripts are coming soon
 
 ## Usage
 [Preparation](./doc/guidance/preparation.md)
+
 [Simple Usage](./doc/guidance/usage.md)
 
 ## To cite our paper
