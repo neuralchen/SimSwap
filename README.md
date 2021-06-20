@@ -20,6 +20,11 @@ Currently, only the test code is available, and training scripts are coming soon
 ![video4](/doc/img/zhoujielun.webp)
 ![video5](/doc/img/zhuyin.webp)
 
+## Top News
+
+**`2021-06-20`**: We release the scripts for arbitrary video and image processing.
+
+
 ## Results
 ![Results1](/doc/img/results1.PNG)
 
@@ -27,7 +32,6 @@ Currently, only the test code is available, and training scripts are coming soon
 
 ## Video
 <img src="./doc/img/video.webp"/>
-
 
 
 **High-quality videos can be found in the link below:**
@@ -45,6 +49,8 @@ Currently, only the test code is available, and training scripts are coming soon
 [[Online Video]](https://www.bilibili.com/video/BV12v411p7j5/)
 
 
+
+
 ## Dependencies
 - python3.6+
 - pytorch1.5+
@@ -52,28 +58,12 @@ Currently, only the test code is available, and training scripts are coming soon
 - opencv
 - pillow
 - numpy
-
+- moviepy
+- insightface
 
 ## Usage
-### To test the pretrained model
-```
-python test_one_image.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path crop_224/6.jpg --pic_b_path crop_224/ds.jpg --output_path output/
-```
-
---name refers to the SimSwap training logs name.
-
-## Pretrained model
-
-### Usage
-There are two archive files in the drive: **checkpoints.zip** and **arcface_checkpoint.tar**
-
-- **Copy the arcface_checkpoint.tar into ./arcface_model**
-- **Unzip checkpoints.zip, place it in the root dir ./**
-
-[[Google Drive]](https://drive.google.com/drive/folders/1jV6_0FIMPC53FZ2HzZNJZGMe55bbu17R?usp=sharing)
-
-[[Baidu Drive]](https://pan.baidu.com/s/1wFV11RVZMHqd-ky4YpLdcA) Password: ```jd2v```
-
+[Preparation](./doc/guidance/preparation.md)
+[Simple Usage](./doc/guidance/usage.md)
 
 ## To cite our paper
 ```
