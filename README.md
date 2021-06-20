@@ -19,7 +19,20 @@ Currently, only the test code is available, and training scripts are coming soon
 
 **`2021-06-20`**: We release the scripts for arbitrary video and image processing.
 
+## Dependencies
+- python3.6+
+- pytorch1.5+
+- torchvision
+- opencv
+- pillow
+- numpy
+- moviepy
+- insightface
 
+## Usage
+[Preparation](./doc/guidance/preparation.md)
+
+[Simple Usage](./doc/guidance/usage.md)
 
 ## Results
 ![Results1](/doc/img/results1.PNG)
@@ -29,10 +42,16 @@ Currently, only the test code is available, and training scripts are coming soon
 ## Video
 <img src="./doc/img/video.webp"/>
 
-![video2](/doc/img/anni.webp)
+<div>
+<img width=24% src="./doc/img/anni.webp"/>
+<img width=24% src="./doc/img/chenglong.webp"/>
+<img width=24% src="./doc/img/zhoujielun.webp"/>
+<img width=24% src="./doc/img/zhuyin.webp"/>
+</div>
+<!-- ![video2](/doc/img/anni.webp)
 ![video3](/doc/img/chenglong.webp)
 ![video4](/doc/img/zhoujielun.webp)
-![video5](/doc/img/zhuyin.webp)
+![video5](/doc/img/zhuyin.webp) -->
 
 
 **High-quality videos can be found in the link below:**
@@ -51,21 +70,6 @@ Currently, only the test code is available, and training scripts are coming soon
 
 
 
-
-## Dependencies
-- python3.6+
-- pytorch1.5+
-- torchvision
-- opencv
-- pillow
-- numpy
-- moviepy
-- insightface
-
-## Usage
-[Preparation](./doc/guidance/preparation.md)
-
-[Simple Usage](./doc/guidance/usage.md)
 
 ## To cite our paper
 ```
