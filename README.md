@@ -13,7 +13,7 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 [[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
 [[Baidu Drive ]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``` -->
 
-## Top News <img width=5% src="./doc/img/new.gif"/>
+## Top News <img width=8% src="./doc/img/new.gif"/>
 
 **`2021-06-20`**: We release the scripts for arbitrary video and image processing, and a colab demo.
 
