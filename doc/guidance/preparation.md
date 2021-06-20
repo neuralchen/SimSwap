@@ -25,4 +25,4 @@ There are two archive files in the drive: **checkpoints.zip** and **arcface_chec
 [[Baidu Drive]](https://pan.baidu.com/s/1wFV11RVZMHqd-ky4YpLdcA) Password: ```jd2v```
 
 ### Note
-We expect users to have GPU with at least 8G memory. For those who do not, we will provide Colab Notebook implementation in the future.
+We expect users to have GPU with at least 8G memory. For those who do not, we provide [[Colab Notebook implementation]](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/SimSwap%20colab.ipynb).

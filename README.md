@@ -15,7 +15,7 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 
 ## Top News
 
-**`2021-06-20`**: We release the scripts for arbitrary video and image processing.
+**`2021-06-20`**: We release the scripts for arbitrary video and image processing, and a colab demo.
 
 ## Dependencies
 - python3.6+
@@ -31,6 +31,8 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 [Preparation](./doc/guidance/preparation.md)
 
 [Inference for image or video face swapping](./doc/guidance/usage.md)
+
+[Colab demo](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/SimSwap%20colab.ipynb)
 
 Training: **coming soon**
 
