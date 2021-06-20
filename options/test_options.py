@@ -15,8 +15,10 @@ class TestOptions(BaseOptions):
         self.parser.add_argument("--engine", type=str, help="run serialized TRT engine")
         self.parser.add_argument("--onnx", type=str, help="run ONNX model via TRT")        
         self.parser.add_argument("--Arc_path", type=str, default='models/BEST_checkpoint.tar', help="run ONNX model via TRT")
-        self.parser.add_argument("--pic_a_path", type=str, default='crop_224/gdg.jpg', help="people a")
-        self.parser.add_argument("--pic_b_path", type=str, default='crop_224/zrf.jpg', help="people b")
-        self.parser.add_argument("--output_path", type=str, default='output/', help="people b")
+        self.parser.add_argument("--pic_a_path", type=str, default='./crop_224/gdg.jpg', help="People who provide identity information")
+        self.parser.add_argument("--pic_b_path", type=str, default='./crop_224/zrf.jpg', help="People who provide information other than their identity")
+        self.parser.add_argument("--video_path", type=str, default='./demo_file/mutil_people_1080p.mp4', help="path for the video to swap")
+        self.parser.add_argument("--temp_path", type=str, default='./temp_results', help="path to save temporarily images")
+        self.parser.add_argument("--output_path", type=str, default='./output/', help="results path")
 
         self.isTrain = False
