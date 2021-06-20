@@ -66,6 +66,7 @@ def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_r
             else:
                 if not os.path.exists(temp_results_dir):
                     os.mkdir(temp_results_dir)
+                frame = logoclass.apply_frames(frame.astype(np.uint8))
                 cv2.imwrite(os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)), frame)
         else:
             break
