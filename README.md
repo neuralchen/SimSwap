@@ -117,3 +117,9 @@ Learn about our other projects
 [[SNGAN-Projection-pytorch]](https://github.com/neuralchen/SNGAN_Projection)
 
 [[Pretrained_VGG19]](https://github.com/neuralchen/Pretrained_VGG19).
+
+## Acknowledgements
+
+<!--ts-->
+* [Insightface](https://github.com/deepinsight/insightface)
+<!--te-->
