@@ -1,19 +1,14 @@
 # SimSwap: An Efficient Framework For High Fidelity Face Swapping
 ## Proceedings of the 28th ACM International Conference on Multimedia
 **The official repository with Pytorch**
-
-Currently, only the test code is available, and training scripts are coming soon
+Our method can realize arbitrary face swapping on images and videos with one single trained model.
+Currently, only the test code is available. Training scripts are coming soon
 [![simswaplogo](/doc/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
-
-[[Arxiv paper]](https://arxiv.org/pdf/2106.06340v1.pdf)
-
-[[ACM DOI paper]](https://dl.acm.org/doi/10.1145/3394171.3413630)
-
-[[Google Drive Paper link]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing)
-
-
-[[Baidu Drive Paper link]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt```
+Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) 
+<!-- [[ACM DOI]](https://dl.acm.org/doi/10.1145/3394171.3413630) 
+[[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
+[[Baidu Drive ]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``` -->
 
 ## Top News
 
@@ -32,22 +27,26 @@ Currently, only the test code is available, and training scripts are coming soon
 ## Usage
 [Preparation](./doc/guidance/preparation.md)
 
-[Simple Usage](./doc/guidance/usage.md)
+[Inference](./doc/guidance/usage.md)
 
-## Results
-![Results1](/doc/img/results1.PNG)
+Training: **coming soon**
 
-![Results2](/doc/img/total.PNG)
 
 ## Video
 <img src="./doc/img/video.webp"/>
-
 <div>
 <img width=24% src="./doc/img/anni.webp"/>
 <img width=24% src="./doc/img/chenglong.webp"/>
 <img width=24% src="./doc/img/zhoujielun.webp"/>
 <img width=24% src="./doc/img/zhuyin.webp"/>
 </div>
+
+## Results
+![Results1](/doc/img/results1.PNG)
+
+![Results2](/doc/img/total.PNG)
+
+
 <!-- ![video2](/doc/img/anni.webp)
 ![video3](/doc/img/chenglong.webp)
 ![video4](/doc/img/zhoujielun.webp)
