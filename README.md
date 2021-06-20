@@ -1,8 +1,11 @@
 # SimSwap: An Efficient Framework For High Fidelity Face Swapping
 ## Proceedings of the 28th ACM International Conference on Multimedia
 **The official repository with Pytorch**
-Our method can realize arbitrary face swapping on images and videos with one single trained model.
+
+*Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
+
 Currently, only the test code is available. Training scripts are coming soon
+
 [![simswaplogo](/doc/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
 Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) 
@@ -27,7 +30,7 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 ## Usage
 [Preparation](./doc/guidance/preparation.md)
 
-[Inference](./doc/guidance/usage.md)
+[Inference for image or video face swapping](./doc/guidance/usage.md)
 
 Training: **coming soon**
 
