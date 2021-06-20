@@ -15,14 +15,10 @@ Currently, only the test code is available, and training scripts are coming soon
 
 [[Baidu Drive Paper link]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt```
 
-![video2](/doc/img/anni.webp)
-![video3](/doc/img/chenglong.webp)
-![video4](/doc/img/zhoujielun.webp)
-![video5](/doc/img/zhuyin.webp)
-
 ## Top News
 
 **`2021-06-20`**: We release the scripts for arbitrary video and image processing.
+
 
 
 ## Results
@@ -32,6 +28,11 @@ Currently, only the test code is available, and training scripts are coming soon
 
 ## Video
 <img src="./doc/img/video.webp"/>
+
+![video2](/doc/img/anni.webp)
+![video3](/doc/img/chenglong.webp)
+![video4](/doc/img/zhoujielun.webp)
+![video5](/doc/img/zhuyin.webp)
 
 
 **High-quality videos can be found in the link below:**
