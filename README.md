@@ -8,9 +8,9 @@ Currently, only the test code is available. Training scripts are coming soon
 
 [![simswaplogo](/doc/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
-Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) 
-<!-- [[ACM DOI]](https://dl.acm.org/doi/10.1145/3394171.3413630) 
-[[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
+Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) [[ACM DOI]](https://dl.acm.org/doi/10.1145/3394171.3413630) 
+
+<!-- [[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
 [[Baidu Drive ]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``` -->
 
 ## Top News <img width=8% src="./doc/img/new.gif"/>
