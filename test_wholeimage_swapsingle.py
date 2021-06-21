@@ -53,9 +53,7 @@ if __name__ == '__main__':
     #create latent id
     img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
     latend_id = model.netArc(img_id_downsample)
-    latend_id = latend_id.detach().to('cpu')
-    latend_id = latend_id/np.linalg.norm(latend_id,axis=1,keepdims=True)
-    latend_id = latend_id.to('cuda')
+    latend_id = F.normalize(latend_id, p=2, dim=1)
 
 
     ############## Forward Pass ######################
