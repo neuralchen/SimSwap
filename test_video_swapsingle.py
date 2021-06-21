@@ -11,7 +11,6 @@ from options.test_options import TestOptions
 from insightface_func.face_detect_crop_single import Face_detect_crop
 from util.videoswap import video_swap
 import os
-from moviepy.editor import AudioFileClip
 
 def lcm(a, b): return abs(a * b) / fractions.gcd(a, b) if a and b else 0
 
@@ -25,10 +24,10 @@ transformer_Arcface = transforms.Compose([
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
-detransformer = transforms.Compose([
-        transforms.Normalize([0, 0, 0], [1/0.229, 1/0.224, 1/0.225]),
-        transforms.Normalize([-0.485, -0.456, -0.406], [1, 1, 1])
-    ])
+# detransformer = transforms.Compose([
+#         transforms.Normalize([0, 0, 0], [1/0.229, 1/0.224, 1/0.225]),
+#         transforms.Normalize([-0.485, -0.456, -0.406], [1, 1, 1])
+#     ])
 
 
 if __name__ == '__main__':
@@ -67,9 +66,7 @@ if __name__ == '__main__':
     #create latent id
     img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
     latend_id = model.netArc(img_id_downsample)
-    latend_id = latend_id.detach().to('cpu')
-    latend_id = latend_id/np.linalg.norm(latend_id,axis=1,keepdims=True)
-    latend_id = latend_id.to('cuda')
+    latend_id = F.normalize(latend_id, p=2, dim=1)
 
     video_swap(opt.video_path, latend_id, model, app, opt.output_path,temp_results_dir=opt.temp_path)
 
