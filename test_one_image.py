@@ -22,10 +22,10 @@ transformer_Arcface = transforms.Compose([
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
-detransformer = transforms.Compose([
-        transforms.Normalize([0, 0, 0], [1/0.229, 1/0.224, 1/0.225]),
-        transforms.Normalize([-0.485, -0.456, -0.406], [1, 1, 1])
-    ])
+# detransformer = transforms.Compose([
+#         transforms.Normalize([0, 0, 0], [1/0.229, 1/0.224, 1/0.225]),
+#         transforms.Normalize([-0.485, -0.456, -0.406], [1, 1, 1])
+#     ])
 if __name__ == '__main__':
     opt = TestOptions().parse()
 
