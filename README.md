@@ -73,6 +73,10 @@ Training: **coming soon**
 
 [[Online Video]](https://www.bilibili.com/video/BV12v411p7j5/)
 
+## User case
+If you have some interesting results after using our project and are willing to share, you can contact us by email or share directly on the issue. Later, we may make a separate section to show these results, which should be cool.
+
+At the same time, if you have suggestions for our project, please feel free to ask questions in the issue, or contact us directly via email: [email1](chenxuanhongzju@outlook.com), [email2](nicklau26@foxmail.com), [email3](ziangliu824@gmail.com). (All three can be contacted, just choose any one)
 
 
 
