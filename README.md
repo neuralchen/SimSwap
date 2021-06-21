@@ -24,6 +24,7 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 - opencv
 - pillow
 - numpy
+- imageio
 - moviepy
 - insightface
 
