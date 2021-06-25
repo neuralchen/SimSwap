@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-docs/ppt/
+doc/ppt/
 checkpoints/
 *.tar
 *.zip
