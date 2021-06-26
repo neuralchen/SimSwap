@@ -19,7 +19,17 @@ def _totensor(array):
     return img.float().div(255)
 
 def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_results_dir='./temp_results', crop_size=224):
-    video_audio_clip = AudioFileClip(video_path)
+    video_forcheck = VideoFileClip(video_path)
+    if video_forcheck.audio is None:
+        no_audio = True
+    else:
+        no_audio = False
+
+    del video_forcheck
+
+    if not no_audio:
+        video_audio_clip = AudioFileClip(video_path)
+
     video = cv2.VideoCapture(video_path)
     logoclass = watermark_image('./simswaplogo/simswaplogo.png')
     ret = True
@@ -71,7 +81,6 @@ def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_r
         else:
             break
 
-        # TODO,是否应该判断这个break是否是异常抛出
     video.release()
 
     # image_filename_list = []
@@ -80,23 +89,9 @@ def video_swap(video_path, id_vetor, swap_model, detect_model, save_path, temp_r
 
     clips = ImageSequenceClip(image_filenames,fps = fps)
 
-    final_clips = clips.set_audio(video_audio_clip)
-
-    # logo = (mp.ImageClip("./simswaplogo/simswap.png")
-    #     .set_duration(clips.duration) # 水印持续时间
-    #     .resize(height=100) # 水印的高度，会等比缩放
-    #     .margin(right=8, top=8, opacity=1) # 水印边距和透明度
-    #     .set_pos(("left"))) # 水印的位置
-
-    # final_clips = mp.CompositeVideoClip([clips, logo])
-
-    # final_clips.write_videofile("./output/test_beatuy_480p_full.mp4")
-    final_clips.write_videofile(save_path)
-
-    # video = VideoFileClip(save_path)
+    if not no_audio:
+        clips = clips.set_audio(video_audio_clip)
 
 
+    clips.write_videofile(save_path)
 
-
-
-    # video_audio_clip
