@@ -6,14 +6,14 @@
 
 Currently, only the test code is available. Training scripts are coming soon
 
-[![simswaplogo](/doc/img/logo1.png)](https://github.com/neuralchen/SimSwap)
+[![simswaplogo](/docs/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
 Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) [[ACM DOI]](https://dl.acm.org/doi/10.1145/3394171.3413630) 
 
 <!-- [[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
 [[Baidu Drive ]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``` -->
 
-## Top News <img width=8% src="./doc/img/new.gif"/>
+## Top News <img width=8% src="./docs/img/new.gif"/>
 
 **`2021-06-20`**: We release the scripts for arbitrary video and image processing, and a colab demo.
 
@@ -29,9 +29,9 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 - insightface
 
 ## Usage
-[Preparation](./doc/guidance/preparation.md)
+[Preparation](./docs/guidance/preparation.md)
 
-[Inference for image or video face swapping](./doc/guidance/usage.md)
+[Inference for image or video face swapping](./docs/guidance/usage.md)
 
 [Colab demo](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/SimSwap%20colab.ipynb)
 
@@ -39,24 +39,24 @@ Training: **coming soon**
 
 
 ## Video
-<img src="./doc/img/video.webp"/>
+<img src="./docs/img/video.webp"/>
 <div>
-<img width=24% src="./doc/img/anni.webp"/>
-<img width=24% src="./doc/img/chenglong.webp"/>
-<img width=24% src="./doc/img/zhoujielun.webp"/>
-<img width=24% src="./doc/img/zhuyin.webp"/>
+<img width=24% src="./docs/img/anni.webp"/>
+<img width=24% src="./docs/img/chenglong.webp"/>
+<img width=24% src="./docs/img/zhoujielun.webp"/>
+<img width=24% src="./docs/img/zhuyin.webp"/>
 </div>
 
 ## Results
-![Results1](/doc/img/results1.PNG)
+![Results1](/docs/img/results1.PNG)
 
-![Results2](/doc/img/total.PNG)
+![Results2](/docs/img/total.PNG)
 
 
-<!-- ![video2](/doc/img/anni.webp)
-![video3](/doc/img/chenglong.webp)
-![video4](/doc/img/zhoujielun.webp)
-![video5](/doc/img/zhuyin.webp) -->
+<!-- ![video2](/docs/img/anni.webp)
+![video3](/docs/img/chenglong.webp)
+![video4](/docs/img/zhoujielun.webp)
+![video5](/docs/img/zhuyin.webp) -->
 
 
 **High-quality videos can be found in the link below:**
@@ -76,7 +76,7 @@ Training: **coming soon**
 ## User case
 If you have some interesting results after using our project and are willing to share, you can contact us by email or share directly on the issue. Later, we may make a separate section to show these results, which should be cool.
 
-At the same time, if you have suggestions for our project, please feel free to ask questions in the issue, or contact us directly via email: [email1](chenxuanhongzju@outlook.com), [email2](nicklau26@foxmail.com), [email3](ziangliu824@gmail.com). (All three can be contacted, just choose any one)
+At the same time, if you have suggestions for our project, please feel free to ask questions in the issue, or contact us directly via email: [email1](mailto:chenxuanhongzju@outlook.com), [email2](mailto:nicklau26@foxmail.com), [email3](mailto:ziangliu824@gmail.com). (All three can be contacted, just choose any one)
 
 
 
@@ -104,9 +104,9 @@ At the same time, if you have suggestions for our project, please feel free to a
 
 **Please visit our another ACMMM2020 high-quality style transfer project**
 
-[![logo](./doc/img/logo.png)](https://github.com/neuralchen/ASMAGAN)
+[![logo](./docs/img/logo.png)](https://github.com/neuralchen/ASMAGAN)
 
-[![title](/doc/img/title.png)](https://github.com/neuralchen/ASMAGAN)
+[![title](/docs/img/title.png)](https://github.com/neuralchen/ASMAGAN)
 
 Learn about our other projects 
 [[RainNet]](https://neuralchen.github.io/RainNet);
