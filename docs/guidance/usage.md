@@ -1,5 +1,15 @@
+<!--
+ * @FilePath: \SimSwap\docs\guidance\usage.md
+ * @Author: AceSix
+ * @Date: 2021-06-28 10:01:40
+ * @LastEditors: AceSix
+ * @LastEditTime: 2021-06-28 10:05:11
+ * Copyright (C) 2021 SJTU. All rights reserved.
+-->
 
 # Usage
+
+###### Before running, please make sure you have installed the environment and downloaded requested files according to the [preparation guidance](./preparation.md).
 
 ### Simple face swapping for already face-aligned images
 ```
