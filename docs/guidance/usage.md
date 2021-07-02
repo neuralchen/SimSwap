@@ -40,6 +40,17 @@ python test_wholeimage_swapsingle.py --isTrain false  --name people --Arc_path a
 ```
 python test_wholeimage_swapmutil.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/mutil_people.jpg --output_path ./output/
 ```
+### About watermark of simswap logo
+The above example command line is to add the simswap logo as the watermark by default. After our discussion, we have added a hyper parameter to control whether to remove watermark.
+
+The usage of removing the watermark is to add an argument: "***--no_simswaplogo***" to the command line, take the command line of "Swap all faces within one image" as an example, the following command line can get the result without watermark:
+```
+python test_wholeimage_swapmutil.py --no_simswaplogo --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/mutil_people.jpg --output_path ./output/
+```
+
+
+
+
 Difference between single face swapping and all face swapping are shown below.
 <img src="../img/multi_face_comparison.png"/>
 
@@ -52,6 +63,7 @@ Difference between single face swapping and all face swapping are shown below.
 | --video_path  | Path of video with the source face to swap |
 | --temp_path  | Path to store intermediate files  |
 | --output_path  | Path of directory to store the face swapping result  |
+| --no_simswaplogo  |The hyper parameter to control whether to remove watermark |
 
 ### Note
 We expect users to have GPU with at least 8G memory. For those who do not, we will provide Colab Notebook implementation in the future.

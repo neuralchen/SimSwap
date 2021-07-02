@@ -13,7 +13,12 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 <!-- [[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
 [[Baidu Drive ]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``` -->
 
+## Attention
+***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
+
 ## Top News <img width=8% src="./docs/img/new.gif"/>
+
+**`2021-07-02`**: We have added a hyper parameter to allow users to choose whether to add the simswap logo as a watermark, please go to the section "About watermark of simswap logo" of [Inference for image or video face swapping](./docs/guidance/usage.md) for details.
 
 **`2021-06-20`**: We release the scripts for arbitrary video and image processing, and a colab demo.
 
