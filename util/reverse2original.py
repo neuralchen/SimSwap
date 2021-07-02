@@ -3,7 +3,7 @@ import numpy as np
 # import  time
 from util.add_watermark import  watermark_image
 
-def reverse2wholeimage(swaped_imgs, mats, crop_size, oriimg, logoclass, save_path = '',):
+def reverse2wholeimage(swaped_imgs, mats, crop_size, oriimg, logoclass, save_path = '', no_simswaplogo = False):
 
     target_image_list = []
     img_mask_list = []
@@ -46,10 +46,13 @@ def reverse2wholeimage(swaped_imgs, mats, crop_size, oriimg, logoclass, save_pat
     img = np.array(oriimg, dtype=np.float)
     for img_mask, target_image in zip(img_mask_list, target_image_list):
         img = img_mask * target_image + (1-img_mask) * img
-
-    final_img = logoclass.apply_frames(img.astype(np.uint8))
+        
+    final_img = img.astype(np.uint8)
+    if not no_simswaplogo:
+        final_img = logoclass.apply_frames(final_img)
     cv2.imwrite(save_path, final_img)
 
     # cv2.imwrite('E:\\lny\\SimSwap-main\\output\\img_div.jpg', img * 255)
     # cv2.imwrite('E:\\lny\\SimSwap-main\\output\\ori_img.jpg', oriimg)
+    
     
