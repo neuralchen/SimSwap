@@ -17,28 +17,37 @@ python test_one_image.py --isTrain false  --name people --Arc_path arcface_model
 ```
 
 ### Face swapping for video
-- Swap only one face within the video(the one with highest confidence by face detection).
+- Swap the ***specific*** face within the video.
 ```
-python test_video_swapsingle.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --video_path ./demo_file/mutil_people_1080p.mp4 --output_path ./output/mutil_test_swapsingle.mp4 --temp_path ./temp_results
+python test_video_swapspecific.py --pic_specific_path ./demo_file/specific1.png --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --video_path ./demo_file/mutil_people_1080p.mp4 --output_path ./output/mutil_test_specific.mp4 --temp_path ./temp_results 
 ```
+When changing the specified face, you need to give a picture of the person whose face is to be changed. Then assign the picture path to the argument "***--pic_specific_path***". This picture should be a front face and show the entire head and neck, which can help accurately change the face (if you still don’t know how to choose the picture, you can refer to the specific*.png of [./demo_file/](https://github.com/neuralchen/SimSwap/tree/main/demo_file)). It would be better if this picture was taken from the video to be changed.
 
 - Swap all faces within the video.
 ```
 python test_video_swapmutil.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --video_path ./demo_file/mutil_people_1080p.mp4 --output_path ./output/mutil_test_swapmutil.mp4 --temp_path ./temp_results
+```
+- Swap only one face within the video(the one with highest confidence by face detection).
+```
+python test_video_swapsingle.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --video_path ./demo_file/mutil_people_1080p.mp4 --output_path ./output/mutil_test_swapsingle.mp4 --temp_path ./temp_results
 ```
 
 
 
 
 ### Face swapping for Arbitrary images
-- Swap only one face within one image(the one with highest confidence by face detection). The result would be saved to ./output/result_whole_swapsingle.jpg
+- Swap only one face within one image(the one with highest confidence by face detection). The result would be saved to ./output/result_whole_swapspecific.jpg
 ```
-python test_wholeimage_swapsingle.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/mutil_people.jpg --output_path ./output/
+python test_wholeimage_swapspecific.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/mutil_people.jpg --output_path ./output/ --pic_specific_path ./demo_file/specific2.png
 ```
 
 - Swap all faces within one image. The result would be saved to ./output/result_whole_swapmutil.jpg
 ```
 python test_wholeimage_swapmutil.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/mutil_people.jpg --output_path ./output/
+```
+- Swap only one face within one image(the one with highest confidence by face detection). The result would be saved to ./output/result_whole_swapsingle.jpg
+```
+python test_wholeimage_swapsingle.py --isTrain false  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_a_path ./demo_file/Iron_man.jpg --pic_b_path ./demo_file/mutil_people.jpg --output_path ./output/
 ```
 ### About watermark of simswap logo
 The above example command line is to add the simswap logo as the watermark by default. After our discussion, we have added a hyper parameter to control whether to remove watermark.
@@ -60,6 +69,7 @@ Difference between single face swapping and all face swapping are shown below.
 | --name  | The SimSwap training logs name |
 | --pic_a_path  | Path of image with the target face |
 | --pic_b_path  | Path of image with the source face to swap |
+| --pic_specific_path  | Path of image with the specific face to be swapped |
 | --video_path  | Path of video with the source face to swap |
 | --temp_path  | Path to store intermediate files  |
 | --output_path  | Path of directory to store the face swapping result  |
