@@ -15,10 +15,13 @@ class TestOptions(BaseOptions):
         self.parser.add_argument("--engine", type=str, help="run serialized TRT engine")
         self.parser.add_argument("--onnx", type=str, help="run ONNX model via TRT")        
         self.parser.add_argument("--Arc_path", type=str, default='models/BEST_checkpoint.tar', help="run ONNX model via TRT")
-        self.parser.add_argument("--pic_a_path", type=str, default='./crop_224/gdg.jpg', help="People who provide identity information")
-        self.parser.add_argument("--pic_b_path", type=str, default='./crop_224/zrf.jpg', help="People who provide information other than their identity")
+        self.parser.add_argument("--pic_a_path", type=str, default='./crop_224/gdg.jpg', help="Person who provides identity information")
+        self.parser.add_argument("--pic_b_path", type=str, default='./crop_224/zrf.jpg', help="Person who provides information other than their identity")
+        self.parser.add_argument("--pic_specific_path", type=str, default='./crop_224/zrf.jpg', help="The specific person to be swapped")
         self.parser.add_argument("--video_path", type=str, default='./demo_file/mutil_people_1080p.mp4', help="path for the video to swap")
         self.parser.add_argument("--temp_path", type=str, default='./temp_results', help="path to save temporarily images")
         self.parser.add_argument("--output_path", type=str, default='./output/', help="results path")
+        self.parser.add_argument('--id_thres', type=float, default=0.03, help='how many test images to run')
+        self.parser.add_argument('--no_simswaplogo', action='store_true', help='Remove the watermark')
 
         self.isTrain = False
