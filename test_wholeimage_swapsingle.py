@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 
     app = Face_detect_crop(name='antelope', root='./insightface_func/models')
-    app.prepare(ctx_id= 0, det_thresh=0.8, det_size=(640,640))
+    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640))
 
     pic_a = opt.pic_a_path
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         swap_result = model(None, b_align_crop_tenor, latend_id, None, True)[0]
         swap_result_list.append(swap_result)
 
-    reverse2wholeimage(swap_result_list, b_mat_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swapsingle.jpg'),opt.no_simswaplogo)
+    reverse2wholeimage(swap_result_list, b_mat_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swapsingle.jpg'), opt.no_simswaplogo)
 
     print(' ')
 
