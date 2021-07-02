@@ -72,7 +72,7 @@ if __name__ == '__main__':
         swap_result = model(None, b_align_crop_tenor, latend_id, None, True)[0]
         swap_result_list.append(swap_result)
 
-    reverse2wholeimage(swap_result_list, b_mat_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swapsingle.jpg'))
+    reverse2wholeimage(swap_result_list, b_mat_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swapsingle.jpg'),opt.no_simswaplogo)
 
     print(' ')
 
