@@ -97,4 +97,4 @@ Difference between single face swapping and all face swapping are shown below.
 | --no_simswaplogo  |The hyper parameter to control whether to remove watermark |
 
 ### Note
-We expect users to have GPU with at least 8G memory. For those who do not, we will provide Colab Notebook implementation in the future.
+We expect users to have GPU with at least 6G memory. For those who do not, we will provide Colab Notebook implementation in the future.
