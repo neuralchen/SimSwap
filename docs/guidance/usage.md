@@ -39,16 +39,16 @@ python test_video_swap_multispecific.py --isTrain false  --name people --Arc_pat
 The folder you assign to ***"--multisepcific_dir"*** should be looked like:
 ```
 $Your folder name$
-├── source
-│   ├── 01.jpg(png)
-│   └── 02.jpg(png)
-│   └──...
-├── target
-│   ├── 01.jpg(png)
-│   └── 02.jpg(png)
-│   └──...
+
+├── DST_01.jpg(png)
+└── DST_02.jpg(png)
+└──...
+└── SRC_01.jpg(png)
+└── SRC_02.jpg(png)
+└──...
 ```
-The result is that the person corresponding to 01.jpg (png) in the source dir in the video will be replaced with the face of the person corresponding to 01.jpg (png) in the target dir. Then the person corresponding to 02.jpg (png) in source dir will be replaced with the face of 02.jpg (png) in target dir, and so on. Note that when you use your own data and name it, do not remove the **0** in **0**1.jpg(png), etc.
+The result is that the face corresponding to SRC_01.jpg (png) in the video will be replaced by the face corresponding to DST_01.jpg (png). Then the character corresponding to SRC_02.jpg(png) will be replaced by the face of DST_02.jpg(png), and so on. Note that when using your own data and naming it, do not remove the **0** in SRC_(DST_)**0**1.jpg(png), etc.
+
 
 
 ### Face swapping for Arbitrary images
