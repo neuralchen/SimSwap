@@ -90,6 +90,7 @@ Difference between single face swapping and all face swapping are shown below.
 | --pic_a_path  | Path of image with the target face |
 | --pic_b_path  | Path of image with the source face to swap |
 | --pic_specific_path  | Path of image with the specific face to be swapped |
+|--mutilsepcific_dir  |Path of image folder for multi specific face swapping|
 | --video_path  | Path of video with the source face to swap |
 | --temp_path  | Path to store intermediate files  |
 | --output_path  | Path of directory to store the face swapping result  |
