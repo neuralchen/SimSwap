@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torchvision import transforms
 from models.models import create_model
 from options.test_options import TestOptions
-from insightface_func.face_detect_crop_mutil import Face_detect_crop
+from insightface_func.face_detect_crop_multi import Face_detect_crop
 from util.reverse2original import reverse2wholeimage
 import os
 from util.add_watermark import watermark_image
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     start_epoch, epoch_iter = 1, 0
     crop_size = 224
 
-    mutilsepcific_dir = opt.mutilsepcific_dir
+    multisepcific_dir = opt.multisepcific_dir
 
     torch.nn.Module.dump_patches = True
     logoclass = watermark_image('./simswaplogo/simswaplogo.png')
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     # The specific person to be swapped(source)
 
     source_specific_id_nonorm_list = []
-    source_path = os.path.join(mutilsepcific_dir,'source','*')
+    source_path = os.path.join(multisepcific_dir,'SRC_*')
     source_specific_images_path = sorted(glob.glob(source_path))
 
     for source_specific_image_path in source_specific_images_path:
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
     # The person who provides id information (list)
     target_id_norm_list = []
-    target_path = os.path.join(mutilsepcific_dir,'target','*')
+    target_path = os.path.join(multisepcific_dir,'DST_*')
     target_images_path = sorted(glob.glob(target_path))
 
     for target_image_path in target_images_path:
@@ -135,7 +135,7 @@ if __name__ == '__main__':
 
     if len(swap_result_list) !=0:
     
-        reverse2wholeimage(swap_result_list, swap_result_matrix_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swap_mutilspecific.jpg'), opt.no_simswaplogo)
+        reverse2wholeimage(swap_result_list, swap_result_matrix_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swap_multispecific.jpg'), opt.no_simswaplogo)
 
         print(' ')
 
