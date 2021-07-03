@@ -20,10 +20,12 @@
 
     <!-- Custom styles for this template -->
     <link href="./css/jumbotron.css" rel="stylesheet">
+    <link href="./css/page.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./js/ie-emulation-modes-warning.js"></script>
+    <script src="./js/which-image.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -143,14 +145,36 @@
         </div>
         <div class="row">
             <div class="col-md-*">
-                <h3>Single Face Video Swap</h2>
+                <h3>Single Face Video Swap</h3>
             </div>
         </div>
         <div class="row">
-            <img width=24% src="./img/anni.webp" />
-            <img width=24% src="./img/chenglong.webp" />
+            <div class="col-md-12">
+                <div class="col-md-3 which-image-container">
+                    <div class="which-image" id=anni>
+                        <img src="./img/id/anni.jpg" onclick="select_source(0)" />
+                    </div>
+                    <div class="which-image" id=chenglong>
+                        <img src="./img/id/chenglong.jpg" onclick="select_source(1)" />
+                    </div>
+                </div>
+                <div class="col-md-3 which-image-container">
+                    <div class="which-image" id=zhoujielun>
+                        <img src="./img/id/zhoujielun.jpg" onclick="select_source(2)" />
+                    </div>
+                    <div class="which-image" id=zhuyin>
+                        <img src="./img/id/zhuyin.jpg" onclick="select_source(3)" />
+                    </div>
+                </div>
+                <div class="col-md-6 image-display" height=100%>
+                    <img id=jiroujinlun src="./img/anni.webp" />
+                </div>
+            </div>
+
+
+            <!-- <img width=24% src="./img/chenglong.webp" />
             <img width=24% src="./img/zhoujielun.webp" />
-            <img width=24% src="./img/zhuyin.webp" />
+            <img width=24% src="./img/zhuyin.webp" /> -->
         </div>
         <div class="row">
             <div class="col-md-*">

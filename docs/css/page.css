@@ -1,0 +1,35 @@
+.which-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.which-image-container :nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.which-image {
+    display: inline-block;
+    flex: 1;
+    flex-basis: 45%;
+    margin: 1% 1% 1% 1%;
+    width: 100%;
+    height: auto;
+}
+
+.which-image img {
+    float: right;
+    width: 100%;
+}
+
+.image-display img {
+    float: right;
+    width: 65%;
+}
