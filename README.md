@@ -17,7 +17,9 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 ***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
-**`2021-07-03`**: We add the scripts for designating a **specific** person in arbitrary video or image to change face and **multi specific** face swapping, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details.
+
+**`2021-07-02`**: We add the scripts for **multi specific** face swapping, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. 
+**`2021-07-02`**: We add the scripts for designating a **specific** person in arbitrary video or image to change face, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details.
 
 **`2021-07-02`**: We have added a hyper parameter to allow users to choose whether to add the simswap logo as a watermark, please go to the section "About watermark of simswap logo" of [Inference for image or video face swapping](./docs/guidance/usage.md) for details.
 
