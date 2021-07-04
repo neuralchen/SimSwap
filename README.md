@@ -17,7 +17,7 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 ***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
-**`2021-07-04`**: A new Colab performing **multi specific** face swapping has been added. You can check it out [here](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
+**`2021-07-04`**: A new Colab performing **multi specific** face video swapping has been added. You can check it out [here](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
 
 **`2021-07-03`**: We add the scripts for **multi specific** face swapping, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. 
 
