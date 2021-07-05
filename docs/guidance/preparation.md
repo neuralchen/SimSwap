@@ -20,9 +20,13 @@ There are two archive files in the drive: **checkpoints.zip** and **arcface_chec
 
 - **Copy the arcface_checkpoint.tar into ./arcface_model**
 - **Unzip checkpoints.zip, place it in the root dir ./**
-
+- 
+[[Github-arcface_model]](https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar)
+[[Github-checkpoints]](https://github.com/neuralchen/SimSwap/releases/download/1.0/checkpoints.zip)
 [[Google Drive]](https://drive.google.com/drive/folders/1jV6_0FIMPC53FZ2HzZNJZGMe55bbu17R?usp=sharing)
 [[Baidu Drive]](https://pan.baidu.com/s/1wFV11RVZMHqd-ky4YpLdcA) Password: ```jd2v```
+
+
 
 ### Note
 We expect users to have GPU with at least 8G memory. For those who do not, we provide [[Colab Notebook implementation]](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/SimSwap%20colab.ipynb).
