@@ -18,7 +18,7 @@ pip install insightface==0.2.1 onnxruntime moviepy
 ### Pretrained model
 There are two archive files in the drive: **checkpoints.zip** and **arcface_checkpoint.tar**
 
-- **Copy the arcface_checkpoint.tar into ./arcface_model**
+- **Copy the arcface_checkpoint.tar into ./arcface_model**  ( DON'T NEED TO EXTRACT THIS)
 - **Unzip checkpoints.zip, place it in the root dir ./**
 - 
 [[Github-arcface_model]](https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar)
