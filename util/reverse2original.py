@@ -130,15 +130,15 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
 
         img_mask = img_white
 
-        if use_mask:
-            kernel = np.ones((10,10),np.uint8)
-            img_mask = cv2.erode(img_mask,kernel,iterations = 1)
-        else:
-            kernel = np.ones((40,40),np.uint8)
-            img_mask = cv2.erode(img_mask,kernel,iterations = 1)
-            kernel_size = (20, 20)
-            blur_size = tuple(2*i+1 for i in kernel_size)
-            img_mask = cv2.GaussianBlur(img_mask, blur_size, 0)
+        # if use_mask:
+        #     kernel = np.ones((40,40),np.uint8)
+        #     img_mask = cv2.erode(img_mask,kernel,iterations = 1)
+        # else:
+        kernel = np.ones((40,40),np.uint8)
+        img_mask = cv2.erode(img_mask,kernel,iterations = 1)
+        kernel_size = (20, 20)
+        blur_size = tuple(2*i+1 for i in kernel_size)
+        img_mask = cv2.GaussianBlur(img_mask, blur_size, 0)
 
         # kernel = np.ones((10,10),np.uint8)
         # img_mask = cv2.erode(img_mask,kernel,iterations = 1)
