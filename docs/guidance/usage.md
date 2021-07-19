@@ -78,7 +78,7 @@ python test_wholeimage_swapmulti.py --no_simswaplogo --isTrain false --use_mask 
 ```
 ### About using mask for better result
 We provide two methods to paste the face back to the original image after changing the face: Using mask or using bounding box. At present, the effect of using mask is the best. All the above code examples are using mask. If you want to use the bounding box, you only need to remove the --use_mask in the code example.
-Difference between using mask and not using mask can be found [here](https://imgsli.com/NjE3ODk).
+Difference between using mask and not using mask can be found [here](https://imgsli.com/NjE3OTA).
 
 ### Difference between single face swapping and all face swapping are shown below.
 <img src="../img/multi_face_comparison.png"/>
