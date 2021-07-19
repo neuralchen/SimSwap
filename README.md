@@ -17,6 +17,8 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 ***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
+**`2021-07-19`**: ***Obvious border abruptness has been resolved***. We add the ability to using mask and upgrade the old algorithm for better visual effect, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. Please don’t forget to go to [Preparation](./docs/guidance/preparation.md) to check the latest set up. (Thanks for the help from [@woctezuma](https://github.com/woctezuma) and [@instant-high](https://github.com/instant-high))
+
 **`2021-07-04`**: A new Colab performing **multi specific** face video swapping has been added. You can check it out [here](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
 
 **`2021-07-03`**: We add the scripts for **multi specific** face swapping, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. 
@@ -141,4 +143,6 @@ Learn about our other projects
 
 <!--ts-->
 * [Insightface](https://github.com/deepinsight/insightface)
+* [Face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)
+* [BiSeNet](https://github.com/CoinCheung/BiSeNet)
 <!--te-->
