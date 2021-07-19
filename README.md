@@ -144,6 +144,7 @@ Learn about our other projects
 ## Acknowledgements
 
 <!--ts-->
+* [Deepfacelab](https://github.com/iperov/DeepFaceLab)
 * [Insightface](https://github.com/deepinsight/insightface)
 * [Face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)
 * [BiSeNet](https://github.com/CoinCheung/BiSeNet)
