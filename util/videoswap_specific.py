@@ -13,13 +13,14 @@ import  time
 from util.add_watermark import watermark_image
 from util.norm import SpecificNorm
 import torch.nn.functional as F
+from parsing_model.model import BiSeNet
 
 def _totensor(array):
     tensor = torch.from_numpy(array)
     img = tensor.transpose(0, 1).transpose(0, 2).contiguous()
     return img.float().div(255)
 
-def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_model, detect_model, save_path, temp_results_dir='./temp_results', crop_size=224, no_simswaplogo = False):
+def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_model, detect_model, save_path, temp_results_dir='./temp_results', crop_size=224, no_simswaplogo = False,use_mask =False):
     video_forcheck = VideoFileClip(video_path)
     if video_forcheck.audio is None:
         no_audio = True
@@ -48,6 +49,16 @@ def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_mod
 
     spNorm =SpecificNorm()
     mse = torch.nn.MSELoss().cuda()
+
+    if use_mask:
+        n_classes = 19
+        net = BiSeNet(n_classes=n_classes)
+        net.cuda()
+        save_pth = os.path.join('./parsing_model/checkpoint', '79999_iter.pth')
+        net.load_state_dict(torch.load(save_pth))
+        net.eval()
+    else:
+        net =None
 
     # while ret:
     for frame_index in tqdm(range(frame_count)): 
@@ -83,7 +94,8 @@ def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_mod
                 if min_value < id_thres:
                     swap_result = swap_model(None, frame_align_crop_tenor_list[min_index], id_vetor, None, True)[0]
                 
-                    reverse2wholeimage([swap_result], [frame_mat_list[min_index]], crop_size, frame, logoclass,os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)),no_simswaplogo)
+                    reverse2wholeimage([frame_align_crop_tenor_list[min_index]], [swap_result], [frame_mat_list[min_index]], crop_size, frame, logoclass,\
+                        os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)),no_simswaplogo,pasring_model =net,use_mask= use_mask, norm = spNorm)
                 else:
                     if not os.path.exists(temp_results_dir):
                         os.mkdir(temp_results_dir)
@@ -114,5 +126,5 @@ def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_mod
         clips = clips.set_audio(video_audio_clip)
 
 
-    clips.write_videofile(save_path)
+    clips.write_videofile(save_path,audio_codec='aac')
 
