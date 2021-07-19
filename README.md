@@ -65,8 +65,8 @@ Training: **coming soon**
 <img width=24% src="./docs/img/zhuyin.webp"/>
 </div>
 <div>
-<img width=49% src="./docs/img/mama_mask_Trim_short.webp"/>
-<img width=49% src="./docs/img/mama_mask_wuyifan_Trim_short.webp"/>
+<img width=49% src="./docs/img/mama_mask_short.webp"/>
+<img width=49% src="./docs/img/mama_mask_wuyifan_short.webp"/>
 </div>
 
 ## Results

@@ -3,7 +3,7 @@
  * @Author: Ziang Liu
  * @Date: 2021-07-03 16:34:56
  * @LastEditors: AceSix
- * @LastEditTime: 2021-07-20 00:23:27
+ * @LastEditTime: 2021-07-20 00:46:27
  * Copyright (C) 2021 SJTU. All rights reserved.
  */
 
@@ -40,10 +40,10 @@ function select_source2(number) {
         }
     }
     if (item_id=='Iron_man'){
-        document.getElementById('mama').src = './img/mama_mask_Trim_short.webp';
+        document.getElementById('mama').src = './img/mama_mask_short.webp';
     }
     else{
-        document.getElementById('mama').src = './img/mama_mask_wuyifan_Trim_short.webp';
+        document.getElementById('mama').src = './img/mama_mask_wuyifan_short.webp';
 
     }
     
