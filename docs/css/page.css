@@ -22,6 +22,7 @@
     margin: 1% 1% 1% 1%;
     width: 100%;
     height: auto;
+
 }
 
 .which-image img {
@@ -29,7 +30,20 @@
     width: 100%;
 }
 
-.image-display img {
+.image-display2 img {
     float: right;
-    width: 65%;
+    width: 100%;
+}
+/* .image-display{
+    align-items: center;
+}
+.image-display2{
+    align-items: center;
+} */
+.select-show {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: purple;
+
+    /* padding: 2px; */
 }
