@@ -11,20 +11,20 @@ def encode_segmentation_rgb(segmentation, no_neck=True):
 
     face_part_ids = [1, 2, 3, 4, 5, 6, 10, 12, 13] if no_neck else [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 14]
     mouth_id = 11
-    hair_id = 17
+    # hair_id = 17
     face_map = np.zeros([parse.shape[0], parse.shape[1]])
     mouth_map = np.zeros([parse.shape[0], parse.shape[1]])
-    hair_map = np.zeros([parse.shape[0], parse.shape[1]])
+    # hair_map = np.zeros([parse.shape[0], parse.shape[1]])
 
     for valid_id in face_part_ids:
         valid_index = np.where(parse==valid_id)
         face_map[valid_index] = 255
     valid_index = np.where(parse==mouth_id)
     mouth_map[valid_index] = 255
-    valid_index = np.where(parse==hair_id)
-    hair_map[valid_index] = 255
+    # valid_index = np.where(parse==hair_id)
+    # hair_map[valid_index] = 255
 
-    return np.stack([face_map, mouth_map, hair_map], axis=2)
+    return np.stack([face_map, mouth_map], axis=2)
 
 
 class SoftErosion(nn.Module):
@@ -173,7 +173,3 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
     if not no_simswaplogo:
         final_img = logoclass.apply_frames(final_img)
     cv2.imwrite(save_path, final_img)
-
-
-    
-    
