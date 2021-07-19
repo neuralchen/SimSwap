@@ -23,7 +23,7 @@ def encode_segmentation_rgb(segmentation, no_neck=True):
     mouth_map[valid_index] = 255
     # valid_index = np.where(parse==hair_id)
     # hair_map[valid_index] = 255
-
+    #return np.stack([face_map, mouth_map,hair_map], axis=2)
     return np.stack([face_map, mouth_map], axis=2)
 
 
@@ -108,7 +108,7 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
             parsing = out.squeeze(0).detach().cpu().numpy().argmax(0)
             vis_parsing_anno = parsing.copy().astype(np.uint8)
             tgt_mask = encode_segmentation_rgb(vis_parsing_anno)
-            if tgt_mask.sum() != 0:
+            if tgt_mask.sum() >= 5000:
                 # face_mask_tensor = tgt_mask[...,0] + tgt_mask[...,1]
                 target_mask = cv2.resize(tgt_mask, (224,  224))
                 # print(source_img)
