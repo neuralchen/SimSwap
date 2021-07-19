@@ -108,16 +108,17 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
             parsing = out.squeeze(0).detach().cpu().numpy().argmax(0)
             vis_parsing_anno = parsing.copy().astype(np.uint8)
             tgt_mask = encode_segmentation_rgb(vis_parsing_anno)
-            # face_mask_tensor = tgt_mask[...,0] + tgt_mask[...,1]
-            target_mask = cv2.resize(tgt_mask, (224,  224))
+            if tgt_mask.sum() != 0:
+                # face_mask_tensor = tgt_mask[...,0] + tgt_mask[...,1]
+                target_mask = cv2.resize(tgt_mask, (224,  224))
+                # print(source_img)
+                target_image_parsing = postprocess(swaped_img, source_img[0].cpu().detach().numpy().transpose((1, 2, 0)), target_mask,smooth_mask)
+                
 
-            # print(source_img)
-            target_image_parsing = postprocess(swaped_img, source_img[0].cpu().detach().numpy().transpose((1, 2, 0)), target_mask,smooth_mask)
-            
-
-            target_image_parsing = cv2.warpAffine(target_image_parsing, mat_rev, orisize)
-            # target_image_parsing = cv2.warpAffine(swaped_img, mat_rev, orisize)
-
+                target_image = cv2.warpAffine(target_image_parsing, mat_rev, orisize)
+                # target_image_parsing = cv2.warpAffine(swaped_img, mat_rev, orisize)
+            else:
+                target_image = cv2.warpAffine(swaped_img, mat_rev, orisize)[..., ::-1]
         else:
             target_image = cv2.warpAffine(swaped_img, mat_rev, orisize)
         # source_image   = cv2.warpAffine(source_img, mat_rev, orisize)
@@ -153,7 +154,7 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
         # target_image_parsing = postprocess(target_image, source_image, tgt_mask)
 
         if use_mask:
-            target_image = np.array(target_image_parsing, dtype=np.float) * 255
+            target_image = np.array(target_image, dtype=np.float) * 255
         else:
             target_image = np.array(target_image, dtype=np.float)[..., ::-1] * 255
 
