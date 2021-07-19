@@ -49,6 +49,10 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 [Colab demo](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/SimSwap%20colab.ipynb)
 
+<div style="background: yellow; width:140px; font-weight:bold;font-family: sans-serif;">Stronger feature</div>
+
+[Colab fo switching specific faces in multi-face videos](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
+
 Training: **coming soon**
 
 
@@ -59,6 +63,10 @@ Training: **coming soon**
 <img width=24% src="./docs/img/chenglong.webp"/>
 <img width=24% src="./docs/img/zhoujielun.webp"/>
 <img width=24% src="./docs/img/zhuyin.webp"/>
+</div>
+<div>
+<img width=49% src="./docs/img/mama_mask_Trim_short.webp"/>
+<img width=49% src="./docs/img/mama_mask_wuyifan_Trim_short.webp"/>
 </div>
 
 ## Results
