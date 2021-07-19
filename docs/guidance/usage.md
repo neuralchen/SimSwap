@@ -10,6 +10,7 @@
 # Usage
 
 ###### Before running, please make sure you have installed the environment and downloaded requested files according to the [preparation guidance](./preparation.md).
+###### The below example command lines are using mask by default.
 
 ### Simple face swapping for already face-aligned images
 ```
@@ -70,7 +71,7 @@ python test_wholeimage_swapspecific.py --isTrain false --use_mask  --name people
 python test_wholeimage_swap_multispecific.py --isTrain false --use_mask  --name people --Arc_path arcface_model/arcface_checkpoint.tar --pic_b_path ./demo_file/multi_people.jpg --output_path ./output/ --multisepcific_dir ./demo_file/multispecific
 ```
 ### About watermark of simswap logo
-The above example command line is to add the simswap logo as the watermark by default. After our discussion, we have added a hyper parameter to control whether to remove watermark.
+The above example command lines are to add the simswap logo as the watermark by default. After our discussion, we have added a hyper parameter to control whether to remove watermark.
 
 The usage of removing the watermark is to add an argument: "***--no_simswaplogo***" to the command line, take the command line of "Swap all faces within one image" as an example, the following command line can get the result without watermark:
 ```
