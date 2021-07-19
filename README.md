@@ -16,6 +16,8 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 ## Attention
 ***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
 
+If you find this project useful, please star it. It is the greatest appreciation of our work.
+
 ## Top News <img width=8% src="./docs/img/new.gif"/>
 **`2021-07-19`**: ***Obvious border abruptness has been resolved***. We add the ability to using mask and upgrade the old algorithm for better visual effect, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. Please don’t forget to go to [Preparation](./docs/guidance/preparation.md) to check the latest set up. (Thanks for the help from [@woctezuma](https://github.com/woctezuma) and [@instant-high](https://github.com/instant-high))
 
