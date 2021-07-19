@@ -24,6 +24,7 @@ class TestOptions(BaseOptions):
         self.parser.add_argument("--output_path", type=str, default='./output/', help="results path")
         self.parser.add_argument('--id_thres', type=float, default=0.03, help='how many test images to run')
         self.parser.add_argument('--no_simswaplogo', action='store_true', help='Remove the watermark')
+        self.parser.add_argument('--use_mask', action='store_true', help='Use mask for better result')
         
-
+ 
         self.isTrain = False
