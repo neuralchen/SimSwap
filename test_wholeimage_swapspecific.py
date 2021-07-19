@@ -14,6 +14,7 @@ import os
 from util.add_watermark import watermark_image
 import torch.nn as nn
 from util.norm import SpecificNorm
+from parsing_model.model import BiSeNet
 
 def lcm(a, b): return abs(a * b) / fractions.gcd(a, b) if a and b else 0
 
@@ -110,11 +111,22 @@ if __name__ == '__main__':
     min_index = np.argmin(id_compare_values_array)
     min_value = id_compare_values_array[min_index]
 
+    if opt.use_mask:
+        n_classes = 19
+        net = BiSeNet(n_classes=n_classes)
+        net.cuda()
+        save_pth = os.path.join('./parsing_model/checkpoint', '79999_iter.pth')
+        net.load_state_dict(torch.load(save_pth))
+        net.eval()
+    else:
+        net =None
+
     if min_value < opt.id_thres:
 
         swap_result = model(None, b_align_crop_tenor_list[min_index], latend_id, None, True)[0]
 
-        reverse2wholeimage([swap_result], [b_mat_list[min_index]], crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swapspecific.jpg'), opt.no_simswaplogo)
+        reverse2wholeimage([b_align_crop_tenor_list[min_index]], [swap_result], [b_mat_list[min_index]], crop_size, img_b_whole, logoclass, \
+            os.path.join(opt.output_path, 'result_whole_swapspecific.jpg'), opt.no_simswaplogo,pasring_model =net,use_mask=opt.use_mask, norm = spNorm)
 
         print(' ')
 

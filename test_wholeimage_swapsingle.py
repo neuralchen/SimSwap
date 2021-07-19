@@ -12,6 +12,8 @@ from insightface_func.face_detect_crop_single import Face_detect_crop
 from util.reverse2original import reverse2wholeimage
 import os
 from util.add_watermark import watermark_image
+from util.norm import SpecificNorm
+from parsing_model.model import BiSeNet
 
 def lcm(a, b): return abs(a * b) / fractions.gcd(a, b) if a and b else 0
 
@@ -35,45 +37,60 @@ if __name__ == '__main__':
     model = create_model(opt)
     model.eval()
 
-
+    spNorm =SpecificNorm()
     app = Face_detect_crop(name='antelope', root='./insightface_func/models')
     app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640))
 
-    pic_a = opt.pic_a_path
+    with torch.no_grad():
+        pic_a = opt.pic_a_path
 
-    img_a_whole = cv2.imread(pic_a)
-    img_a_align_crop, _ = app.get(img_a_whole,crop_size)
-    img_a_align_crop_pil = Image.fromarray(cv2.cvtColor(img_a_align_crop[0],cv2.COLOR_BGR2RGB)) 
-    img_a = transformer_Arcface(img_a_align_crop_pil)
-    img_id = img_a.view(-1, img_a.shape[0], img_a.shape[1], img_a.shape[2])
+        img_a_whole = cv2.imread(pic_a)
+        img_a_align_crop, _ = app.get(img_a_whole,crop_size)
+        img_a_align_crop_pil = Image.fromarray(cv2.cvtColor(img_a_align_crop[0],cv2.COLOR_BGR2RGB)) 
+        img_a = transformer_Arcface(img_a_align_crop_pil)
+        img_id = img_a.view(-1, img_a.shape[0], img_a.shape[1], img_a.shape[2])
 
-    # convert numpy to tensor
-    img_id = img_id.cuda()
+        # convert numpy to tensor
+        img_id = img_id.cuda()
 
-    #create latent id
-    img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
-    latend_id = model.netArc(img_id_downsample)
-    latend_id = F.normalize(latend_id, p=2, dim=1)
+        #create latent id
+        img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
+        latend_id = model.netArc(img_id_downsample)
+        latend_id = F.normalize(latend_id, p=2, dim=1)
 
 
-    ############## Forward Pass ######################
+        ############## Forward Pass ######################
 
-    pic_b = opt.pic_b_path
-    img_b_whole = cv2.imread(pic_b)
+        pic_b = opt.pic_b_path
+        img_b_whole = cv2.imread(pic_b)
 
-    img_b_align_crop_list, b_mat_list = app.get(img_b_whole,crop_size)
-    # detect_results = None
-    swap_result_list = []
+        img_b_align_crop_list, b_mat_list = app.get(img_b_whole,crop_size)
+        # detect_results = None
+        swap_result_list = []
 
-    for b_align_crop in img_b_align_crop_list:
+        b_align_crop_tenor_list = []
 
-        b_align_crop_tenor = _totensor(cv2.cvtColor(b_align_crop,cv2.COLOR_BGR2RGB))[None,...].cuda()
+        for b_align_crop in img_b_align_crop_list:
 
-        swap_result = model(None, b_align_crop_tenor, latend_id, None, True)[0]
-        swap_result_list.append(swap_result)
+            b_align_crop_tenor = _totensor(cv2.cvtColor(b_align_crop,cv2.COLOR_BGR2RGB))[None,...].cuda()
 
-    reverse2wholeimage(swap_result_list, b_mat_list, crop_size, img_b_whole, logoclass, os.path.join(opt.output_path, 'result_whole_swapsingle.jpg'), opt.no_simswaplogo)
+            swap_result = model(None, b_align_crop_tenor, latend_id, None, True)[0]
+            swap_result_list.append(swap_result)
+            b_align_crop_tenor_list.append(b_align_crop_tenor)
 
-    print(' ')
+        if opt.use_mask:
+            n_classes = 19
+            net = BiSeNet(n_classes=n_classes)
+            net.cuda()
+            save_pth = os.path.join('./parsing_model/checkpoint', '79999_iter.pth')
+            net.load_state_dict(torch.load(save_pth))
+            net.eval()
+        else:
+            net =None
 
-    print('************ Done ! ************')
+        reverse2wholeimage(b_align_crop_tenor_list, swap_result_list, b_mat_list, crop_size, img_b_whole, logoclass, \
+            os.path.join(opt.output_path, 'result_whole_swapsingle.jpg'), opt.no_simswaplogo,pasring_model =net,use_mask=opt.use_mask, norm = spNorm)
+
+        print(' ')
+
+        print('************ Done ! ************')
