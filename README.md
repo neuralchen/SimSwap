@@ -83,7 +83,7 @@ Training: **coming soon**
 
 **High-quality videos can be found in the link below:**
 
-[[Mama(video) 1080p]](https://drive.google.com/file/d/1JTruy6BTnT1EK1PSaZ4x-F8RhtZU_kT3/view?usp=sharing)
+[[Mama(video) 1080p]](https://drive.google.com/file/d/1mnSlwzz7f4H2O7UwApAHo64mgK4xSNyK/view?usp=sharing)
 
 [[Google Drive link for video 1]](https://drive.google.com/file/d/1hdne7Gw39d34zt3w1NYV3Ln5cT8PfCNm/view?usp=sharing)
 
