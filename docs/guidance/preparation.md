@@ -8,9 +8,10 @@ conda create -n simswap python=3.6
 conda activate simswap
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
 (option): pip install --ignore-installed imageio
-pip install insightface==0.2.1 onnxruntime-gpu==1.2.0 moviepy
+pip install insightface==0.2.1 onnxruntime-gpu moviepy
+(option): pip install onnxruntime-gpu  (If you want to reduce the inference time)(It will be diffcult to install onnxruntime-gpu , the specify version of onnxruntime-gpu may depends on your machine and cuda version.)
 ```
-- ***We have now updated the prepare document. The main change is that the gpu version of onnx is now installed by default (previously the cpu version of onnx is installed by default). If you have configured the environment before, now use pip install onnxruntime-gpu==1.2.0,You can increase the computing speed.***
+- ***We have now updated the prepare document. The main change gpu version of onnx is supported now. If you have configured the environment before, now use pip install onnxruntime-gpu ,You can increase the computing speed.***
 - We use the face detection and alignment methods from **[insightface](https://github.com/deepinsight/insightface)** for image preprocessing. Please download the relative files and unzip them to ./insightface_func/models from [this link](https://onedrive.live.com/?authkey=%21ADJ0aAOSsc90neY&cid=4A83B6B633B029CC&id=4A83B6B633B029CC%215837&parId=4A83B6B633B029CC%215834&action=locate).
 - We use the face parsing from **[face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)** for image postprocessing. Please download the relative file and place it in ./parsing_model/checkpoint from [this link](https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view).
 - The pytorch and cuda versions above are most recommanded. They may vary.
