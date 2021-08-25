@@ -56,6 +56,8 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 [Colab fo switching specific faces in multi-face videos](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
 
+[Image face swapping demo & Docker image on Replicate](https://replicate.ai/neuralchen/simswap-image)
+
 Training: **coming soon**
 
 
