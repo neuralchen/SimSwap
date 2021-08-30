@@ -20,6 +20,8 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
 
+**`2021-08-30`**: Docker has been supported, please go to [Inference for image or video face swapping](https://replicate.ai/neuralchen/simswap-image) for details.
+
 **`2021-08-17`**: We have updated the [Preparation](./docs/guidance/preparation.md), The main change is that the gpu version of onnx is now installed by default, Now the time to process a video is greatly reduced.
 
 **`2021-07-19`**: ***Obvious border abruptness has been resolved***. We add the ability to using mask and upgrade the old algorithm for better visual effect, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. Please don’t forget to go to [Preparation](./docs/guidance/preparation.md) to check the latest set up. (Thanks for the help from [@woctezuma](https://github.com/woctezuma) and [@instant-high](https://github.com/instant-high))
