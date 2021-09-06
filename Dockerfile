@@ -59,11 +59,8 @@ RUN apt update && \
 
 WORKDIR /home
 
-ARG PROJECT_COMMIT_HASH=186a57aa96f6422a3043021602d3586641711186
-
 RUN git clone --single-branch https://github.com/neuralchen/SimSwap.git && \
     cd ./SimSwap && \
-    git checkout ${PROJECT_COMMIT_HASH} && \
     rm -rf .git && \
     ./download-weights.sh && \
     python test_video_swapsingle.py \
