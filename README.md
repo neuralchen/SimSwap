@@ -20,7 +20,7 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
 
-**`2021-08-30`**: Docker has been supported, please go to [Inference for image or video face swapping](https://replicate.ai/neuralchen/simswap-image) for details.
+**`2021-08-30`**: Docker has been supported, please refer [here](https://replicate.ai/neuralchen/simswap-image) for details.
 
 **`2021-08-17`**: We have updated the [Preparation](./docs/guidance/preparation.md), The main change is that the gpu version of onnx is now installed by default, Now the time to process a video is greatly reduced.
 
