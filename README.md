@@ -139,6 +139,11 @@ For academic and non-commercial use only.The whole project is under the CC-BY-NC
 
 [![title](/docs/img/title.png)](https://github.com/neuralchen/ASMAGAN)
 
+**Please visit our AAAI2021 sketch based rendering project**
+
+[![logo](./docs/img/girl2.gif)](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale)
+[![title](/docs/img/girl2-RGB.png)](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale)
+
 Learn about our other projects 
 [[RainNet]](https://neuralchen.github.io/RainNet);
 
