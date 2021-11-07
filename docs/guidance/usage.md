@@ -102,4 +102,4 @@ Difference between using mask and not using mask can be found [here](https://img
 | --use_mask  |The hyper parameter to control whether to use face parsing for the better visual effects(I recommend to use)|
 
 ### Note
-We expect users to have GPU with at least 3G memory.the For those who do not, we will provide Colab Notebook implementation in the future.
+We expect users to have GPU with at least 3G memory.For those who do not, we will provide Colab Notebook implementation in the future.
