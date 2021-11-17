@@ -40,6 +40,10 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 **`2021-06-20`**: We release the scripts for arbitrary video and image processing, and a colab demo.
 
+## High Resolution Dataset VGGFace2-HQ
+
+[![logo](./docs/img/vggface2_hq_compare.png)](https://github.com/NNNNAI/VGGFace2-HQ)
+
 ## Dependencies
 - python3.6+
 - pytorch1.5+
