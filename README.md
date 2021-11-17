@@ -16,13 +16,13 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 ## Attention
 ***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
 
-***Please do not ignore the content at the end of this README***
+***Please do not ignore the content at the end of this README!***
 
 If you find this project useful, please star it. It is the greatest appreciation of our work.
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
 
-**`2021-11-17`**: We released a high resolution face dataset [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) and the method to generate this dataset. This dataset is for academic face editing purpose. 
+**`2021-11-17`**: We released a high resolution face dataset [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) and the method to generate this dataset. This dataset is for research purpose. 
 
 **`2021-08-30`**: Docker has been supported, please refer [here](https://replicate.ai/neuralchen/simswap-image) for details.
 
@@ -126,12 +126,7 @@ For academic and non-commercial use only.The whole project is under the CC-BY-NC
   booktitle = {{MM} '20: The 28th {ACM} International Conference on Multimedia},
   pages     = {2003--2011},
   publisher = {{ACM}},
-  year      = {2020},
-  url       = {https://doi.org/10.1145/3394171.3413630},
-  doi       = {10.1145/3394171.3413630},
-  timestamp = {Thu, 15 Oct 2020 16:32:08 +0200},
-  biburl    = {https://dblp.org/rec/conf/mm/ChenCNG20.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+  year      = {2020}
 }
 ```
 
