@@ -22,6 +22,8 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
 
+**`2021-11-24`**: We have trained a beta version of ***Simswap 512*** on [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) and open sourced the checkpoint of this model (if you think the Simswap 512 is cool, please star our  [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) repo). Please don’t forget to go to [Preparation](./docs/guidance/preparation.md) and [Inference for image or video face swapping](./docs/guidance/usage.md) to check the latest set up.
+
 **`2021-11-23`**: The google drive link of [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) is released. 
 
 **`2021-11-17`**: We released a high resolution face dataset [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) and the method to generate this dataset. This dataset is for research purpose. 
@@ -31,16 +33,6 @@ If you find this project useful, please star it. It is the greatest appreciation
 **`2021-08-17`**: We have updated the [Preparation](./docs/guidance/preparation.md), The main change is that the gpu version of onnx is now installed by default, Now the time to process a video is greatly reduced.
 
 **`2021-07-19`**: ***Obvious border abruptness has been resolved***. We add the ability to using mask and upgrade the old algorithm for better visual effect, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. Please don’t forget to go to [Preparation](./docs/guidance/preparation.md) to check the latest set up. (Thanks for the help from [@woctezuma](https://github.com/woctezuma) and [@instant-high](https://github.com/instant-high))
-
-**`2021-07-04`**: A new Colab performing **multi specific** face video swapping has been added. You can check it out [here](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
-
-**`2021-07-03`**: We add the scripts for **multi specific** face swapping, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details. 
-
-**`2021-07-02`**: We add the scripts for designating a **specific** person in arbitrary video or image to change face, please go to [Inference for image or video face swapping](./docs/guidance/usage.md) for details.
-
-**`2021-07-02`**: We have added a hyper parameter to allow users to choose whether to add the simswap logo as a watermark, please go to the section "About watermark of simswap logo" of [Inference for image or video face swapping](./docs/guidance/usage.md) for details.
-
-**`2021-06-20`**: We release the scripts for arbitrary video and image processing, and a colab demo.
 
 ## The first open source high resolution dataset for face swapping!!!
 ## High Resolution Dataset [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ)
