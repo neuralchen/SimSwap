@@ -5,6 +5,7 @@
 *Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
 
 Currently, only the test code is available. Training scripts are coming soon
+High resolution version ***SimSwap-HQ*** is supported!
 
 [![simswaplogo](/docs/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
