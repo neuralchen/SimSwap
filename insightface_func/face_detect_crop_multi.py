@@ -1,3 +1,11 @@
+'''
+Author: Naiyuan liu
+Github: https://github.com/NNNNAI
+Date: 2021-11-23 17:03:58
+LastEditors: Naiyuan liu
+LastEditTime: 2021-11-24 16:45:41
+Description: 
+'''
 from __future__ import division
 import collections
 import numpy as np
@@ -6,7 +14,7 @@ import os
 import os.path as osp
 import cv2
 from insightface.model_zoo import model_zoo
-from insightface.utils import face_align
+from insightface_func.utils import face_align_ffhqandnewarc as face_align
 
 __all__ = ['Face_detect_crop', 'Face']
 
@@ -40,8 +48,9 @@ class Face_detect_crop:
         self.det_model = self.models['detection']
 
 
-    def prepare(self, ctx_id, det_thresh=0.5, det_size=(640, 640)):
+    def prepare(self, ctx_id, det_thresh=0.5, det_size=(640, 640), mode ='None'):
         self.det_thresh = det_thresh
+        self.mode = mode
         assert det_size is not None
         print('set det-size:', det_size)
         self.det_size = det_size
@@ -73,7 +82,7 @@ class Face_detect_crop:
             kps = None
             if kpss is not None:
                 kps = kpss[i]
-            M, _ = face_align.estimate_norm(kps, crop_size, mode ='None') 
+            M, _ = face_align.estimate_norm(kps, crop_size, mode = self.mode) 
             align_img = cv2.warpAffine(img, M, (crop_size, crop_size), borderValue=0.0)
             align_img_list.append(align_img)
             M_list.append(M)

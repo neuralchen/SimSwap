@@ -53,7 +53,7 @@ if __name__ == '__main__':
         img_att = img_att.cuda()
 
         #create latent id
-        img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
+        img_id_downsample = F.interpolate(img_id, size=(112,112))
         latend_id = model.netArc(img_id_downsample)
         latend_id = latend_id.detach().to('cpu')
         latend_id = latend_id/np.linalg.norm(latend_id,axis=1,keepdims=True)

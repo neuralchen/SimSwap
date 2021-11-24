@@ -1,3 +1,11 @@
+'''
+Author: Naiyuan liu
+Github: https://github.com/NNNNAI
+Date: 2021-11-23 17:03:58
+LastEditors: Naiyuan liu
+LastEditTime: 2021-11-23 17:08:08
+Description: 
+'''
 from .base_options import BaseOptions
 
 class TestOptions(BaseOptions):
@@ -25,6 +33,6 @@ class TestOptions(BaseOptions):
         self.parser.add_argument('--id_thres', type=float, default=0.03, help='how many test images to run')
         self.parser.add_argument('--no_simswaplogo', action='store_true', help='Remove the watermark')
         self.parser.add_argument('--use_mask', action='store_true', help='Use mask for better result')
+        self.parser.add_argument('--crop_size', type=int, default=224, help='Crop of size of input image')
         
- 
         self.isTrain = False

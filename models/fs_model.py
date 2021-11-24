@@ -4,10 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import os
 from torch.autograd import Variable
-from util.image_pool import ImagePool
 from .base_model import BaseModel
 from . import networks
-from .fs_networks import Generator_Adain_Upsample, Discriminator
 
 class SpecificNorm(nn.Module):
     def __init__(self, epsilon=1e-8):
@@ -51,6 +49,11 @@ class fsModel(BaseModel):
         self.isTrain = opt.isTrain
 
         device = torch.device("cuda:0")
+
+        if opt.crop_size == 224:
+            from .fs_networks import Generator_Adain_Upsample, Discriminator
+        elif opt.crop_size == 512:
+            from .fs_networks_512 import Generator_Adain_Upsample, Discriminator
 
         # Generator network
         self.netG = Generator_Adain_Upsample(input_nc=3, output_nc=3, latent_size=512, n_blocks=9, deep=False)
@@ -197,7 +200,7 @@ class fsModel(BaseModel):
 
 
         #G_ID
-        img_fake_down = F.interpolate(img_fake, scale_factor=0.5)
+        img_fake_down = F.interpolate(img_fake, size=(112,112))
         img_fake_down = self.spNorm(img_fake_down)
         latent_fake = self.netArc(img_fake_down)
         loss_G_ID = (1 - self.cosin_metric(latent_fake, latent_id))

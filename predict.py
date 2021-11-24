@@ -56,7 +56,7 @@ class Predictor(cog.Predictor):
         model = create_model(opt)
         model.eval()
 
-        crop_size = 224
+        crop_size = opt.crop_size
         spNorm = SpecificNorm()
 
         with torch.no_grad():
@@ -71,7 +71,7 @@ class Predictor(cog.Predictor):
             img_id = img_id.cuda()
 
             # create latent id
-            img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
+            img_id_downsample = F.interpolate(img_id, size=(112,112))
             latend_id = model.netArc(img_id_downsample)
             latend_id = F.normalize(latend_id, p=2, dim=1)
 

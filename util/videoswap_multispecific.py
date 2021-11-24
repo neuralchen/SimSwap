@@ -83,7 +83,7 @@ def video_swap(video_path, target_id_norm_list,source_specific_id_nonorm_list,id
                     frame_align_crop_tenor = _totensor(cv2.cvtColor(frame_align_crop,cv2.COLOR_BGR2RGB))[None,...].cuda()
 
                     frame_align_crop_tenor_arcnorm = spNorm(frame_align_crop_tenor)
-                    frame_align_crop_tenor_arcnorm_downsample = F.interpolate(frame_align_crop_tenor_arcnorm, scale_factor=0.5)
+                    frame_align_crop_tenor_arcnorm_downsample = F.interpolate(frame_align_crop_tenor_arcnorm, size=(112,112))
                     frame_align_crop_crop_id_nonorm = swap_model.netArc(frame_align_crop_tenor_arcnorm_downsample)
                     id_compare_values.append([])
                     for source_specific_id_nonorm_tmp in source_specific_id_nonorm_list:

@@ -37,9 +37,15 @@ if __name__ == '__main__':
     opt = TestOptions().parse()
 
     start_epoch, epoch_iter = 1, 0
-    crop_size = 224
+    crop_size = opt.crop_size
 
     torch.nn.Module.dump_patches = True
+    if crop_size == 512:
+        opt.which_epoch = 550000
+        opt.name = '512'
+        mode = 'ffhq'
+    else:
+        mode = 'None'
     logoclass = watermark_image('./simswaplogo/simswaplogo.png')
     model = create_model(opt)
     model.eval()
@@ -49,7 +55,7 @@ if __name__ == '__main__':
 
 
     app = Face_detect_crop(name='antelope', root='./insightface_func/models')
-    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640))
+    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640),mode=mode)
 
     pic_a = opt.pic_a_path
     pic_specific = opt.pic_specific_path
@@ -65,7 +71,7 @@ if __name__ == '__main__':
     img_id = img_id.cuda()
 
     #create latent id
-    img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
+    img_id_downsample = F.interpolate(img_id, size=(112,112))
     latend_id = model.netArc(img_id_downsample)
     latend_id = F.normalize(latend_id, p=2, dim=1)
 
@@ -81,7 +87,7 @@ if __name__ == '__main__':
     specific_person = specific_person.cuda()
 
     #create latent id
-    specific_person_downsample = F.interpolate(specific_person, scale_factor=0.5)
+    specific_person_downsample = F.interpolate(specific_person, size=(112,112))
     specific_person_id_nonorm = model.netArc(specific_person_downsample)
     # specific_person_id_norm = F.normalize(specific_person_id_nonorm, p=2, dim=1)
 
@@ -101,7 +107,7 @@ if __name__ == '__main__':
         b_align_crop_tenor = _totensor(cv2.cvtColor(b_align_crop,cv2.COLOR_BGR2RGB))[None,...].cuda()
 
         b_align_crop_tenor_arcnorm = spNorm(b_align_crop_tenor)
-        b_align_crop_tenor_arcnorm_downsample = F.interpolate(b_align_crop_tenor_arcnorm, scale_factor=0.5)
+        b_align_crop_tenor_arcnorm_downsample = F.interpolate(b_align_crop_tenor_arcnorm, size=(112,112))
         b_align_crop_id_nonorm = model.netArc(b_align_crop_tenor_arcnorm_downsample)
 
         id_compare_values.append(mse(b_align_crop_id_nonorm,specific_person_id_nonorm).detach().cpu().numpy())

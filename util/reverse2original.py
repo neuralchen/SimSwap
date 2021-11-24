@@ -110,7 +110,7 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
             tgt_mask = encode_segmentation_rgb(vis_parsing_anno)
             if tgt_mask.sum() >= 5000:
                 # face_mask_tensor = tgt_mask[...,0] + tgt_mask[...,1]
-                target_mask = cv2.resize(tgt_mask, (224,  224))
+                target_mask = cv2.resize(tgt_mask, (crop_size,  crop_size))
                 # print(source_img)
                 target_image_parsing = postprocess(swaped_img, source_img[0].cpu().detach().numpy().transpose((1, 2, 0)), target_mask,smooth_mask)
                 

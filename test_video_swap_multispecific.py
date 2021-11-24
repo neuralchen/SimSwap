@@ -35,16 +35,22 @@ if __name__ == '__main__':
     opt = TestOptions().parse()
     pic_specific = opt.pic_specific_path
     start_epoch, epoch_iter = 1, 0
-    crop_size = 224
+    crop_size = opt.crop_size
 
     multisepcific_dir = opt.multisepcific_dir
     torch.nn.Module.dump_patches = True
+    if crop_size == 512:
+        opt.which_epoch = 550000
+        opt.name = '512'
+        mode = 'ffhq'
+    else:
+        mode = 'None'
     model = create_model(opt)
     model.eval()
 
 
     app = Face_detect_crop(name='antelope', root='./insightface_func/models')
-    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640))
+    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640),mode=mode)
 
     # The specific person to be swapped(source)
 
@@ -61,7 +67,7 @@ if __name__ == '__main__':
             # convert numpy to tensor
             specific_person = specific_person.cuda()
             #create latent id
-            specific_person_downsample = F.interpolate(specific_person, scale_factor=0.5)
+            specific_person_downsample = F.interpolate(specific_person, size=(112,112))
             specific_person_id_nonorm = model.netArc(specific_person_downsample)
             source_specific_id_nonorm_list.append(specific_person_id_nonorm.clone())
 
@@ -80,7 +86,7 @@ if __name__ == '__main__':
             # convert numpy to tensor
             img_id = img_id.cuda()
             #create latent id
-            img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
+            img_id_downsample = F.interpolate(img_id, size=(112,112))
             latend_id = model.netArc(img_id_downsample)
             latend_id = F.normalize(latend_id, p=2, dim=1)
             target_id_norm_list.append(latend_id.clone())
@@ -90,5 +96,5 @@ if __name__ == '__main__':
 
 
         video_swap(opt.video_path, target_id_norm_list,source_specific_id_nonorm_list, opt.id_thres, \
-            model, app, opt.output_path,temp_results_dir=opt.temp_path,no_simswaplogo=opt.no_simswaplogo,use_mask=opt.use_mask)
+            model, app, opt.output_path,temp_results_dir=opt.temp_path,no_simswaplogo=opt.no_simswaplogo,use_mask=opt.use_mask,crop_size=crop_size)
 

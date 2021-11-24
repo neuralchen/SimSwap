@@ -1,3 +1,11 @@
+'''
+Author: Naiyuan liu
+Github: https://github.com/NNNNAI
+Date: 2021-11-23 17:03:58
+LastEditors: Naiyuan liu
+LastEditTime: 2021-11-24 19:00:34
+Description: 
+'''
 
 import cv2
 import torch
@@ -34,15 +42,21 @@ if __name__ == '__main__':
     opt = TestOptions().parse()
 
     start_epoch, epoch_iter = 1, 0
-    crop_size = 224
+    crop_size = opt.crop_size
 
     torch.nn.Module.dump_patches = True
+
+    if crop_size == 512:
+        opt.which_epoch = 550000
+        opt.name = '512'
+        mode = 'ffhq'
+    else:
+        mode = 'None'
     model = create_model(opt)
     model.eval()
 
-
     app = Face_detect_crop(name='antelope', root='./insightface_func/models')
-    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640))
+    app.prepare(ctx_id= 0, det_thresh=0.6, det_size=(640,640),mode = mode)
 
     with torch.no_grad():
         pic_a = opt.pic_a_path
@@ -65,10 +79,10 @@ if __name__ == '__main__':
         # img_att = img_att.cuda()
 
         #create latent id
-        img_id_downsample = F.interpolate(img_id, scale_factor=0.5)
+        img_id_downsample = F.interpolate(img_id, size=(112,112))
         latend_id = model.netArc(img_id_downsample)
         latend_id = F.normalize(latend_id, p=2, dim=1)
 
         video_swap(opt.video_path, latend_id, model, app, opt.output_path,temp_results_dir=opt.temp_path,\
-            no_simswaplogo=opt.no_simswaplogo,use_mask=opt.use_mask)
+            no_simswaplogo=opt.no_simswaplogo,use_mask=opt.use_mask,crop_size=crop_size)
 
