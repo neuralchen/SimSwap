@@ -125,8 +125,6 @@ For academic and non-commercial use only.The whole project is under the CC-BY-NC
                Yanhao Ge},
   title     = {SimSwap: An Efficient Framework For High Fidelity Face Swapping},
   booktitle = {{MM} '20: The 28th {ACM} International Conference on Multimedia},
-  pages     = {2003--2011},
-  publisher = {{ACM}},
   year      = {2020}
 }
 ```
