@@ -4,7 +4,9 @@
 
 *Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
 
-Currently, only the test code is available. Training scripts are coming soon......
+Currently, only the test code is available. 
+
+Training scripts is coming. We are doing our final inspection about the scripts!
 
 The high resolution version of ***SimSwap-HQ*** is supported!
 
