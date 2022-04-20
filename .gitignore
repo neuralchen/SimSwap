@@ -136,3 +136,6 @@ checkpoints/
 *.avi
 *.pdf
 *.pptx
+
+*.pth
+*.onnx
