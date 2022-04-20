@@ -62,6 +62,8 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 Download the dataset from [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
 
+The training script is slightly different from the original version, e.g., we replace the patch discriminator with the projected discriminator, which saves a lot of hardware overhead and achieves slightly better results.
+
 - Train 256 models 
 ```
 python train.py --name simswap256_test  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --train_simswap True --Gdeep False
@@ -71,6 +73,7 @@ python train.py --name simswap256_test  --gpu_ids 0 --dataset /path/to/VGGFace2H
 ```
 python train.py --name simswap512_test  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --train_simswap False --Gdeep True
 ```
+
 
 
 ## Inference with a pretrained SimSwap model
