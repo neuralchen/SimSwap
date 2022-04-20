@@ -4,9 +4,9 @@
 
 *Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
 
-Currently, only the test code is available. 
+Training and test code are now available!
 
-Training scripts is coming. We are doing our final inspection about the scripts!
+We are working with our incoming paper SimSwap++, keeping expecting!
 
 The high resolution version of ***SimSwap-HQ*** is supported!
 
@@ -25,6 +25,8 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 If you find this project useful, please star it. It is the greatest appreciation of our work.
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
+
+**`2022-4-20`**: Training scripts are now available. We highly recommend that you guys train the simswap model with our released high quality dataset [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
 
 **`2021-11-24`**: We have trained a beta version of ***SimSwap-HQ*** on [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) and open sourced the checkpoint of this model (if you think the Simswap 512 is cool, please star our  [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ) repo). Please don’t forget to go to [Preparation](./docs/guidance/preparation.md) and [Inference for image or video face swapping](./docs/guidance/usage.md) to check the latest set up.
 
@@ -54,7 +56,24 @@ If you find this project useful, please star it. It is the greatest appreciation
 - moviepy
 - insightface
 
-## Usage
+## Training
+
+[Preparation](./docs/guidance/preparation.md)
+
+Download the dataset from [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
+
+- Train 256 models 
+```
+python train.py --name simswap256_test  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --train_simswap True --Gdeep False
+```
+
+- Train 512 models 
+```
+python train.py --name simswap512_test  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --train_simswap False --Gdeep True
+```
+
+
+## Inference with a pretrained SimSwap model
 [Preparation](./docs/guidance/preparation.md)
 
 [Inference for image or video face swapping](./docs/guidance/usage.md)
