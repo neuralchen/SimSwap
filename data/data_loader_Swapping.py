@@ -3,10 +3,8 @@ import glob
 import torch
 import random
 from PIL import Image
-from pathlib import Path
 from torch.utils import data
 from torchvision import transforms as T
-# from StyleResize import StyleResize
 
 class data_prefetcher():
     def __init__(self, loader):

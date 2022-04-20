@@ -2,7 +2,6 @@
 import cv2
 import torch
 import fractions
-import numpy as np
 from PIL import Image
 import torch.nn.functional as F
 from torchvision import transforms
