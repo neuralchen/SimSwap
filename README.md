@@ -89,7 +89,6 @@ python train.py --name simswap512_test  --gpu_ids 0 --dataset /path/to/VGGFace2H
 
 [Image face swapping demo & Docker image on Replicate](https://replicate.ai/neuralchen/simswap-image)
 
-Training: **coming soon**
 
 
 ## Video
