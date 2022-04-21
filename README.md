@@ -63,10 +63,9 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 [Preparation](./docs/guidance/preparation.md)
 
-Download the dataset from [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
-
 The training script is slightly different from the original version, e.g., we replace the patch discriminator with the projected discriminator, which saves a lot of hardware overhead and achieves slightly better results.
-In order to ensure normal training, the batch size must be greater than 1.
+
+In order to ensure the normal training, the batch size must be greater than 1.
 
 - Train 224 models with VGGFace2 224*224 [VGGFace2-224 (10.8G)](https://drive.google.com/file/d/19pWvdEHS-CEG6tW3PdxdtZ5QEymVjImc/view?usp=sharing)
 ```
