@@ -4,7 +4,8 @@
 
 *Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
 
-Training and test code are now available! [Colab demo](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb) 
+Training and test code are now available!
+[ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
 
 We are working with our incoming paper SimSwap++, keeping expecting!
 
@@ -25,6 +26,8 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 If you find this project useful, please star it. It is the greatest appreciation of our work.
 
 ## Top News <img width=8% src="./docs/img/new.gif"/>
+
+**`2022-04-21`**: For resource limited users, we provide the cropped VGGFace2-224 dataset [VGGFace2-224 (10.8G)](https://drive.google.com/file/d/19pWvdEHS-CEG6tW3PdxdtZ5QEymVjImc/view?usp=sharing).
 
 **`2022-04-20`**: Training scripts are now available. We highly recommend that you guys train the simswap model with our released high quality dataset [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
 
@@ -65,7 +68,7 @@ Download the dataset from [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
 The training script is slightly different from the original version, e.g., we replace the patch discriminator with the projected discriminator, which saves a lot of hardware overhead and achieves slightly better results.
 In order to ensure normal training, the batch size must be greater than 1.
 
-- Train 224 models with VGGFace2 224*224 [VGGFace2-224](https://github.com/NNNNAI/VGGFace2-HQ)
+- Train 224 models with VGGFace2 224*224 [VGGFace2-224 (10.8G)](https://drive.google.com/file/d/19pWvdEHS-CEG6tW3PdxdtZ5QEymVjImc/view?usp=sharing)
 ```
 python train.py --name simswap224_test --batchSize 4  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
 ```
