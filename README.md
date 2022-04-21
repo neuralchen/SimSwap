@@ -70,6 +70,9 @@ In order to ensure normal training, the batch size must be greater than 1.
 python train.py --name simswap224_test --batchSize 4  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
 ```
 
+[Colab demo for training 224 model](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb) 
+
+
 - Train 512 models with VGGFace2-HQ 512*512 [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
 ```
 python train.py --name simswap512_test  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep True
