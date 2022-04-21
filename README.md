@@ -4,7 +4,7 @@
 
 *Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
 
-Training and test code are now available!
+Training and test code are now available! [Colab demo](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb) 
 
 We are working with our incoming paper SimSwap++, keeping expecting!
 
