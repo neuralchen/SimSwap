@@ -16,7 +16,7 @@ pip install insightface==0.2.1 onnxruntime moviepy
 - We use the face parsing from **[face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)** for image postprocessing. Please download the relative file and place it in ./parsing_model/checkpoint from [this link](https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view).
 - The pytorch and cuda versions above are most recommanded. They may vary.
 - Using insightface with different versions is not recommanded. Please use this specific version.
-- These settings are tested valid on both Windows and Ununtu.
+- These settings are tested valid on both Windows and Ubuntu.
 
 ### Pretrained model
 There are two archive files in the drive: **checkpoints.zip** and **arcface_checkpoint.tar**

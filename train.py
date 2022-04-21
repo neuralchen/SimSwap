@@ -5,7 +5,7 @@
 # Created Date: Monday December 27th 2021
 # Author: Chen Xuanhong
 # Email: chenxuanhongzju@outlook.com
-# Last Modified:  Wednesday, 20th April 2022 6:33:30 pm
+# Last Modified:  Thursday, 21st April 2022 6:21:17 pm
 # Modified By: Chen Xuanhong
 # Copyright (c) 2021 Shanghai Jiao Tong University
 #############################################################
@@ -29,6 +29,8 @@ from util.plot import plot_batch
 from models.projected_model import fsModel
 from data.data_loader_Swapping import GetLoader
 
+def str2bool(v):
+    return v.lower() in ('true')
 
 class TrainOptions:
     def __init__(self):
@@ -39,7 +41,10 @@ class TrainOptions:
         self.parser.add_argument('--name', type=str, default='simswap', help='name of the experiment. It decides where to store samples and models')
         self.parser.add_argument('--gpu_ids', default='0')
         self.parser.add_argument('--checkpoints_dir', type=str, default='./checkpoints', help='models are saved here')
-        self.parser.add_argument('--isTrain', type=bool, default=True)
+        self.parser.add_argument('--isTrain', type=str2bool, default='True')
+
+        # parser.add_argument('--use_tensorboard', type=str2bool, default='True',
+    #                         choices=['True', 'False'], help='enable the tensorboard')
 
         # input/output sizes       
         self.parser.add_argument('--batchSize', type=int, default=16, help='input batch size')       
@@ -57,8 +62,8 @@ class TrainOptions:
         self.parser.add_argument('--niter_decay', type=int, default=10000, help='# of iter to linearly decay learning rate to zero')
         self.parser.add_argument('--beta1', type=float, default=0.0, help='momentum term of adam')
         self.parser.add_argument('--lr', type=float, default=0.0004, help='initial learning rate for adam')
-        self.parser.add_argument("--Gdeep",type=bool,default=False)
-        self.parser.add_argument("--train_simswap",type=bool,default=True)
+        self.parser.add_argument('--Gdeep', type=str2bool, default='False')
+        self.parser.add_argument('--train_simswap', type=str2bool, default='True')
 
         # for discriminators         
         self.parser.add_argument('--lambda_feat', type=float, default=10.0, help='weight for feature matching loss')
