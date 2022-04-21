@@ -5,7 +5,7 @@
 # Created Date: Monday December 27th 2021
 # Author: Chen Xuanhong
 # Email: chenxuanhongzju@outlook.com
-# Last Modified:  Thursday, 21st April 2022 8:10:05 pm
+# Last Modified:  Thursday, 21st April 2022 10:36:48 pm
 # Modified By: Chen Xuanhong
 # Copyright (c) 2021 Shanghai Jiao Tong University
 #############################################################
@@ -44,7 +44,7 @@ class TrainOptions:
         self.parser.add_argument('--isTrain', type=str2bool, default='True')
 
         # input/output sizes       
-        self.parser.add_argument('--batchSize', type=int, default=16, help='input batch size')       
+        self.parser.add_argument('--batchSize', type=int, default=2, help='input batch size')       
 
         # for displays
         self.parser.add_argument('--tag', type=str, default='simswap')
@@ -69,9 +69,9 @@ class TrainOptions:
 
         self.parser.add_argument("--Arc_path", type=str, default='arcface_model/arcface_checkpoint.tar', help="run ONNX model via TRT")
         self.parser.add_argument("--total_step", type=int, default=1000000, help='total training step')
-        self.parser.add_argument("--log_frep", type=int, default=250, help='frequence for printing log information')
-        self.parser.add_argument("--sample_freq", type=int, default=1000, help='frequence for sampling')
-        self.parser.add_argument("--model_freq", type=int, default=10000, help='frequence for saving the model')
+        self.parser.add_argument("--log_frep", type=int, default=10, help='frequence for printing log information')
+        self.parser.add_argument("--sample_freq", type=int, default=30, help='frequence for sampling')
+        self.parser.add_argument("--model_freq", type=int, default=40, help='frequence for saving the model')
 
         
 
