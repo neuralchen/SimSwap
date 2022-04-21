@@ -5,7 +5,7 @@
 # Created Date: Monday December 27th 2021
 # Author: Chen Xuanhong
 # Email: chenxuanhongzju@outlook.com
-# Last Modified:  Thursday, 21st April 2022 6:21:17 pm
+# Last Modified:  Thursday, 21st April 2022 8:10:05 pm
 # Modified By: Chen Xuanhong
 # Copyright (c) 2021 Shanghai Jiao Tong University
 #############################################################
@@ -42,9 +42,6 @@ class TrainOptions:
         self.parser.add_argument('--gpu_ids', default='0')
         self.parser.add_argument('--checkpoints_dir', type=str, default='./checkpoints', help='models are saved here')
         self.parser.add_argument('--isTrain', type=str2bool, default='True')
-
-        # parser.add_argument('--use_tensorboard', type=str2bool, default='True',
-    #                         choices=['True', 'False'], help='enable the tensorboard')
 
         # input/output sizes       
         self.parser.add_argument('--batchSize', type=int, default=16, help='input batch size')       

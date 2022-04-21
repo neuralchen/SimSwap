@@ -5,7 +5,7 @@
 # Created Date: Wednesday January 12th 2022
 # Author: Chen Xuanhong
 # Email: chenxuanhongzju@outlook.com
-# Last Modified:  Wednesday, 20th April 2022 6:34:47 pm
+# Last Modified:  Thursday, 21st April 2022 8:13:37 pm
 # Modified By: Chen Xuanhong
 # Copyright (c) 2022 Shanghai Jiao Tong University
 #############################################################
@@ -94,7 +94,7 @@ class fsModel(BaseModel):
     def save(self, which_epoch):
         self.save_network(self.netG, 'G', which_epoch)
         self.save_network(self.netD, 'D', which_epoch)
-        self.save_optim(self.optimizer_G, 'G', which_epoch,)
+        self.save_optim(self.optimizer_G, 'G', which_epoch)
         self.save_optim(self.optimizer_D, 'D', which_epoch)
         '''if self.gen_features:
             self.save_network(self.netE, 'E', which_epoch, self.gpu_ids)'''

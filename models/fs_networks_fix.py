@@ -89,9 +89,11 @@ class Generator_Adain_Upsample(nn.Module):
                  padding_type='reflect'):
         assert (n_blocks >= 0)
         super(Generator_Adain_Upsample, self).__init__()
-        activation = nn.ReLU(True)
-        self.deep = deep
 
+        activation = nn.ReLU(True)
+        
+        self.deep = deep
+        
         self.first_layer = nn.Sequential(nn.ReflectionPad2d(3), nn.Conv2d(input_nc, 64, kernel_size=7, padding=0),
                                          norm_layer(64), activation)
         ### downsample
@@ -101,6 +103,7 @@ class Generator_Adain_Upsample(nn.Module):
                                    norm_layer(256), activation)
         self.down3 = nn.Sequential(nn.Conv2d(256, 512, kernel_size=3, stride=2, padding=1),
                                    norm_layer(512), activation)
+                                   
         if self.deep:
             self.down4 = nn.Sequential(nn.Conv2d(512, 512, kernel_size=3, stride=2, padding=1),
                                        norm_layer(512), activation)
