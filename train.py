@@ -5,7 +5,7 @@
 # Created Date: Monday December 27th 2021
 # Author: Chen Xuanhong
 # Email: chenxuanhongzju@outlook.com
-# Last Modified:  Friday, 22nd April 2022 12:15:47 am
+# Last Modified:  Friday, 22nd April 2022 12:34:40 am
 # Modified By: Chen Xuanhong
 # Copyright (c) 2021 Shanghai Jiao Tong University
 #############################################################
@@ -42,16 +42,14 @@ class TrainOptions:
         self.parser.add_argument('--isTrain', type=str2bool, default='True')
 
         # input/output sizes       
-        self.parser.add_argument('--batchSize', type=int, default=2, help='input batch size')       
+        self.parser.add_argument('--batchSize', type=int, default=4, help='input batch size')       
 
         # for displays
-        self.parser.add_argument('--tag', type=str, default='simswap')
         self.parser.add_argument('--use_tensorboard', type=str2bool, default='False')
 
         # for training
         self.parser.add_argument('--dataset', type=str, default="/path/to/VGGFace2", help='path to the face swapping dataset')
         self.parser.add_argument('--continue_train', type=str2bool, default='True', help='continue training: load the latest model')
-        # self.parser.add_argument('--Gdeep', type=str2bool, default='False')
         self.parser.add_argument('--load_pretrain', type=str, default='checkpoints', help='load the pretrained model from the specified location')
         self.parser.add_argument('--which_epoch', type=str, default='320', help='which epoch to load? set to latest to use latest cached model')
         self.parser.add_argument('--phase', type=str, default='train', help='train, val, test, etc')
@@ -60,7 +58,6 @@ class TrainOptions:
         self.parser.add_argument('--beta1', type=float, default=0.0, help='momentum term of adam')
         self.parser.add_argument('--lr', type=float, default=0.0004, help='initial learning rate for adam')
         self.parser.add_argument('--Gdeep', type=str2bool, default='False')
-        self.parser.add_argument('--train_simswap', type=str2bool, default='True')
 
         # for discriminators         
         self.parser.add_argument('--lambda_feat', type=float, default=10.0, help='weight for feature matching loss')
@@ -182,9 +179,6 @@ if __name__ == '__main__':
         for interval in range(2):
             random.shuffle(randindex)
             src_image1, src_image2  = train_loader.next()
-            if opt.train_simswap:
-                src_image1      = F.interpolate(src_image1,size=(256,256), mode='bicubic')
-                src_image2      = F.interpolate(src_image2,size=(256,256), mode='bicubic')
             
             if step%2 == 0:
                 img_id = src_image2
