@@ -5,7 +5,7 @@
 # Created Date: Monday December 27th 2021
 # Author: Chen Xuanhong
 # Email: chenxuanhongzju@outlook.com
-# Last Modified:  Friday, 22nd April 2022 12:34:40 am
+# Last Modified:  Friday, 22nd April 2022 10:49:26 am
 # Modified By: Chen Xuanhong
 # Copyright (c) 2021 Shanghai Jiao Tong University
 #############################################################
@@ -49,9 +49,9 @@ class TrainOptions:
 
         # for training
         self.parser.add_argument('--dataset', type=str, default="/path/to/VGGFace2", help='path to the face swapping dataset')
-        self.parser.add_argument('--continue_train', type=str2bool, default='True', help='continue training: load the latest model')
-        self.parser.add_argument('--load_pretrain', type=str, default='checkpoints', help='load the pretrained model from the specified location')
-        self.parser.add_argument('--which_epoch', type=str, default='320', help='which epoch to load? set to latest to use latest cached model')
+        self.parser.add_argument('--continue_train', type=str2bool, default='False', help='continue training: load the latest model')
+        self.parser.add_argument('--load_pretrain', type=str, default='./checkpoints/simswap224_test', help='load the pretrained model from the specified location')
+        self.parser.add_argument('--which_epoch', type=str, default='10000', help='which epoch to load? set to latest to use latest cached model')
         self.parser.add_argument('--phase', type=str, default='train', help='train, val, test, etc')
         self.parser.add_argument('--niter', type=int, default=10000, help='# of iter at starting learning rate')
         self.parser.add_argument('--niter_decay', type=int, default=10000, help='# of iter to linearly decay learning rate to zero')
