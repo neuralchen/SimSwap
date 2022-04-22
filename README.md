@@ -69,7 +69,7 @@ In order to ensure the normal training, the batch size must be greater than 1.
 
 Friendly reminder, due to the difference in training settings, the user-trained model will have subtle differences in visual effects from the pre-trained model we provide.
 
-- Train 224 models with VGGFace2 224*224 [VGGFace2-224 (10.8G)](https://drive.google.com/file/d/19pWvdEHS-CEG6tW3PdxdtZ5QEymVjImc/view?usp=sharing)
+- Train 224 models with VGGFace2 224*224 [[Google Driver] VGGFace2-224 (10.8G)](https://drive.google.com/file/d/19pWvdEHS-CEG6tW3PdxdtZ5QEymVjImc/view?usp=sharing) [[Baidu Driver] ](https://pan.baidu.com/s/1OiwLJHVBSYB4AY2vEcfN0A) [Password: lrod]
 ```
 python train.py --name simswap224_test --batchSize 4  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
 ```
