@@ -2,7 +2,11 @@
 ## Proceedings of the 28th ACM International Conference on Multimedia
 **The official repository with Pytorch**
 
-*Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.*
+**Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.**
+
+***The training and forwarding code is for academic use only, do not use the code for legal and ethical violations.***
+
+***In the event of violation of the legal and ethical requirements of the user's country or region, this code repository is exempt from liability***
 
 Training and test code are now available!
 [ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
