@@ -70,16 +70,22 @@ In order to ensure the normal training, the batch size must be greater than 1.
 Friendly reminder, due to the difference in training settings, the user-trained model will have subtle differences in visual effects from the pre-trained model we provide.
 
 - Train 224 models with VGGFace2 224*224 [[Google Driver] VGGFace2-224 (10.8G)](https://drive.google.com/file/d/19pWvdEHS-CEG6tW3PdxdtZ5QEymVjImc/view?usp=sharing) [[Baidu Driver] ](https://pan.baidu.com/s/1OiwLJHVBSYB4AY2vEcfN0A) [Password: lrod]
+
+For faster convergence and better results, a large batch size (more than 16) is recommended!
+
+***We recommend training more than 400K iterations (batch size is 16), 600K~800K will be better, more iterations will not be recommended.***
+
 ```
-python train.py --name simswap224_test --batchSize 4  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
+python train.py --name simswap224_test --batchSize 8  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
 ```
 
 [Colab demo for training 224 model](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb) 
 
+For faster convergence and better results, a large batch size (more than 16) is recommended!
 
 - Train 512 models with VGGFace2-HQ 512*512 [VGGFace2-HQ](https://github.com/NNNNAI/VGGFace2-HQ).
 ```
-python train.py --name simswap512_test  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep True
+python train.py --name simswap512_test  --batchSize 16  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep True
 ```
 
 
