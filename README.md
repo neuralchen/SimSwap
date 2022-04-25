@@ -77,7 +77,6 @@ For faster convergence and better results, a large batch size (more than 16) is 
 
 ***We recommend training more than 400K iterations (batch size is 16), 600K~800K will be better, more iterations will not be recommended.***
 
-VGGFace2 is not a toy dataset like Cifar or Minist that takes a lot of time to learn.
 
 ```
 python train.py --name simswap224_test --batchSize 8  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
