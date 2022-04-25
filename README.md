@@ -4,10 +4,6 @@
 
 **Our method can realize **arbitrary face swapping** on images and videos with **one single trained model**.**
 
-***The training and forwarding code is for academic use only, do not use the code for legal and ethical violations.***
-
-***In the event of violation of the legal and ethical requirements of the user's country or region, this code repository is exempt from liability***
-
 Training and test code are now available!
 [ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
 
@@ -24,6 +20,8 @@ Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pd
 
 ## Attention
 ***This project is for technical and academic use only. Please do not apply it to illegal and unethical scenarios.***
+
+***In the event of violation of the legal and ethical requirements of the user's country or region, this code repository is exempt from liability***
 
 ***Please do not ignore the content at the end of this README!***
 
