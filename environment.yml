@@ -1,0 +1,16 @@
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - numpy=1.20.2
+  - opencv=4.5.0
+  - pillow=8.2.0
+  - moviepy
+  - pip=21.2.2
+  - pip:
+    - insightface==0.2.1
+    - onnxruntime-gpu==1.8.1
+    - -f https://download.pytorch.org/whl/torch_stable.html
+    - torch==1.9.0+cu111
+    - torchvision==0.10.0+cu111
