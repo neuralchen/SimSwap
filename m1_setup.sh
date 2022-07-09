@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 conda create -n torch-gpu python=3.9
 conda activate torch-gpu
 conda install pytorch torchvision torchaudio -c pytorch-nightly
