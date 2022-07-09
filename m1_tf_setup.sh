@@ -3,6 +3,7 @@
 conda init --all
 conda create --name tensorflow_m1 python==3.9
 conda activate tensorflow_m1
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 -c pytorch
 python3 -m pip uninstall imageio
 python3 -m pip uninstall numpy
 python3 -m pip uninstall wrapt
