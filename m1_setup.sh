@@ -12,19 +12,20 @@ conda init --all
 conda create -n torch-gpu python=3.9
 conda activate torch-gpu
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
+conda install -c conda-forge jupyter jupyterlab
+#wget -P ./arcface_model https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar
+#wget https://github.com/neuralchen/SimSwap/releases/download/1.0/checkpoints.zip
+#unzip ./checkpoints.zip  -d ./checkpoints
+#wget -P ./parsing_model/checkpoint https://github.com/neuralchen/SimSwap/releases/download/1.0/79999_iter.pth
+#wget --no-check-certificate "https://sh23tw.dm.files.1drv.com/y4mmGiIkNVigkSwOKDcV3nwMJulRGhbtHdkheehR5TArc52UjudUYNXAEvKCii2O5LAmzGCGK6IfleocxuDeoKxDZkNzDRSt4ZUlEt8GlSOpCXAFEkBwaZimtWGDRbpIGpb_pz9Nq5jATBQpezBS6G_UtspWTkgrXHHxhviV2nWy8APPx134zOZrUIbkSF6xnsqzs3uZ_SEX_m9Rey0ykpx9w" -O antelope.zip
+#unzip ./antelope.zip -d ./insightface_func/models/
+conda install -c apple tensorflow-deps==2.5.0
 python3 -m pip install --ignore-installed imageio
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install onnxruntime-gpu
-conda install -c conda-forge jupyter jupyterlab
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install googledrivedownloader
 python3 -m pip install imageio==2.4.1
-wget -P ./arcface_model https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar
-wget https://github.com/neuralchen/SimSwap/releases/download/1.0/checkpoints.zip
-unzip ./checkpoints.zip  -d ./checkpoints
-wget -P ./parsing_model/checkpoint https://github.com/neuralchen/SimSwap/releases/download/1.0/79999_iter.pth
-wget --no-check-certificate "https://sh23tw.dm.files.1drv.com/y4mmGiIkNVigkSwOKDcV3nwMJulRGhbtHdkheehR5TArc52UjudUYNXAEvKCii2O5LAmzGCGK6IfleocxuDeoKxDZkNzDRSt4ZUlEt8GlSOpCXAFEkBwaZimtWGDRbpIGpb_pz9Nq5jATBQpezBS6G_UtspWTkgrXHHxhviV2nWy8APPx134zOZrUIbkSF6xnsqzs3uZ_SEX_m9Rey0ykpx9w" -O antelope.zip
-unzip ./antelope.zip -d ./insightface_func/models/
 python3 -m pip install numpy==1.19.2
 python3 -m pip install torch
 python3 -m pip install image
@@ -34,7 +35,7 @@ python3 -m pip install wrapt==1.12.1
 python3 -m pip install opt_einsum
 python3 -m pip install flatbuffers==1.12.0
 python3 -m pip install google-pasta==0.2
-python3 -m pip install h5py==3.1.0
+python3 -m pip install h5py==3.7.0
 python3 -m pip install keras-nightly==2.5.0.dev
 python3 -m pip install keras-preprocessing==1.1.2
 python3 -m pip install tensorflow-estimator<2.6.0,>=2.5.0rc0
@@ -44,6 +45,9 @@ python3 -m pip install gast==0.4.0
 python3 -m pip install grpcio==1.34.0
 python3 -m pip install typing-extensions==3.7.4
 python3 -m pip install astunparse==1.6.3
+python3 -m pip install tensorflow-macos==2.5.0
+python3 -m pip install tensorflow-macos==2.5.0 --no-dependencies
+python3 -m pip install tensorflow-metal==0.1.2
 
 python3 m1_test.py
 for i in `seq 1 6`; do
@@ -54,10 +58,6 @@ conda deactivate
 conda init --all
 conda create --name tensorflow_m1 python==3.9
 conda activate tensorflow_m1
-conda install -c apple tensorflow-deps==2.5.0
-python3 -m pip install tensorflow-macos==2.5.0
-python3 -m pip install tensorflow-macos==2.5.0 --no-dependencies
-python3 -m pip install tensorflow-metal==0.1.2
 
 python3 m1_tf_test.py
 
