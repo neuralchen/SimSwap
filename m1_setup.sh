@@ -21,21 +21,6 @@ conda install -c conda-forge jupyter jupyterlab
 #wget --no-check-certificate "https://sh23tw.dm.files.1drv.com/y4mmGiIkNVigkSwOKDcV3nwMJulRGhbtHdkheehR5TArc52UjudUYNXAEvKCii2O5LAmzGCGK6IfleocxuDeoKxDZkNzDRSt4ZUlEt8GlSOpCXAFEkBwaZimtWGDRbpIGpb_pz9Nq5jATBQpezBS6G_UtspWTkgrXHHxhviV2nWy8APPx134zOZrUIbkSF6xnsqzs3uZ_SEX_m9Rey0ykpx9w" -O antelope.zip
 #unzip ./antelope.zip -d ./insightface_func/models/
 
-python3 -m pip uninstall imageio
-python3 -m pip uninstall numpy
-python3 -m pip uninstall wrapt
-python3 -m pip uninstall flatbuffers
-python3 -m pip uninstall google-pasta
-python3 -m pip uninstall h5py
-python3 -m pip uninstall keras-nightly
-python3 -m pip uninstall keras-preprocessing
-python3 -m pip uninstall tensorflow-estimator
-python3 -m pip uninstall termcolor
-python3 -m pip uninstall absl
-python3 -m pip uninstall gast
-python3 -m pip uninstall grpcio
-python3 -m pip uninstall typing-extentions
-python3 -m pip uninstall astunparse
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install onnxruntime-gpu
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
