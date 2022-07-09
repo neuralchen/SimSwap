@@ -26,7 +26,7 @@ python3 -m pip install onnxruntime-gpu
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install googledrivedownloader
 python3 -m pip install imageio==2.4.1
-python3 -m pip install numpy==1.19.2
+python3 -m pip install numpy==1.23.1
 python3 -m pip install torch
 python3 -m pip install image
 python3 -m pip install timm
