@@ -9,4 +9,5 @@ python3 -m pip install image
 python3 -m pip install timm
 python3 -m pip install PlL
 python3 m1_test.py
+conda deactivate
 
