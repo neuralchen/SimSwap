@@ -4,7 +4,20 @@ conda init --all
 conda create --name tensorflow_m1 python==3.9
 conda activate tensorflow_m1
 python3 -m pip install --ignore-installed imageio
-python3 -m pip install insightface==0.2.1 onnxruntime moviepy
+python3 -m pip install --ignore-installed numpy
+python3 -m pip install --ignore-installed wrapt
+python3 -m pip install --ignore-installed flatbuffers
+python3 -m pip install --ignore-installed google-pasta
+python3 -m pip install --ignore-installed h5py
+python3 -m pip install --ignore-installed keras-nightly
+python3 -m pip install --ignore-installed keras-preprocessing
+python3 -m pip install --ignore-installed tensorflow-estimator
+python3 -m pip install --ignore-installed termcolor
+python3 -m pip install --ignore-installed absl
+python3 -m pip install --ignore-installed gast
+python3 -m pip install --ignore-installed grpcio
+python3 -m pip install --ignore-installed typing-extentions
+python3 -m pip install --ignore-installed astunparse
 python3 -m pip install onnxruntime-gpu
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install googledrivedownloader
