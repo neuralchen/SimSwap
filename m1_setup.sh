@@ -55,12 +55,5 @@ python3 train.py --name simswap224_test --batchSize 8000000000000  --gpu_ids 0 -
 done
 
 conda deactivate
-conda init --all
-conda create --name tensorflow_m1 python==3.9
-conda activate tensorflow_m1
-
-python3 m1_tf_test.py
-
-conda deactivate
 
 exit 0
