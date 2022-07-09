@@ -4,21 +4,7 @@ conda init --all
 conda create --name tensorflow_m1 python==3.9
 conda activate tensorflow_m1
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 -c pytorch
-python3 -m pip uninstall imageio
-python3 -m pip uninstall numpy
-python3 -m pip uninstall wrapt
-python3 -m pip uninstall flatbuffers
-python3 -m pip uninstall google-pasta
-python3 -m pip uninstall h5py
-python3 -m pip uninstall keras-nightly
-python3 -m pip uninstall keras-preprocessing
-python3 -m pip uninstall tensorflow-estimator
-python3 -m pip uninstall termcolor
-python3 -m pip uninstall absl
-python3 -m pip uninstall gast
-python3 -m pip uninstall grpcio
-python3 -m pip uninstall typing-extentions
-python3 -m pip uninstall astunparse
+
 python3 -m pip install onnxruntime-gpu
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install googledrivedownloader
