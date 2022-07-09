@@ -49,7 +49,7 @@ python3 -m pip install wrapt==1.12.1
 python3 -m pip install opt_einsum
 python3 -m pip install flatbuffers==1.12.0
 python3 -m pip install google-pasta==0.2
-python3 -m pip install h5py==3.7.0
+python3 -m pip install h5py==3.1.0
 python3 -m pip install keras-nightly==2.5.0.dev
 python3 -m pip install keras-preprocessing==1.1.2
 python3 -m pip install tensorflow-estimator<2.6.0,>=2.5.0rc0
