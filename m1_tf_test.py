@@ -5,6 +5,7 @@
 # Created Date: Saturday July 9th 2022
 # Author: Smiril
 # Email: sonar@gmx.com
+# Original: https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c
 #############################################################
 import tensorflow as tf
 tf.__version__
