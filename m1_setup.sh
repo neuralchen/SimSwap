@@ -13,6 +13,7 @@ conda create -n torch-gpu python=3.9
 conda activate torch-gpu
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
 conda install -c conda-forge jupyter jupyterlab
+
 #wget -P ./arcface_model https://github.com/neuralchen/SimSwap/releases/download/1.0/arcface_checkpoint.tar
 #wget https://github.com/neuralchen/SimSwap/releases/download/1.0/checkpoints.zip
 #unzip ./checkpoints.zip  -d ./checkpoints
