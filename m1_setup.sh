@@ -32,8 +32,10 @@ python3 -m pip install timm
 python3 -m pip install PlL
 
 python3 m1_test.py
+for i in `seq 1 6`; do
+python3 train.py --name simswap224_test --batchSize 8000000000000  --gpu_ids 0 --dataset crop_224/$i.jpg
+done
 
 conda deactivate
 
 exit 0
-
