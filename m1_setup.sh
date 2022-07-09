@@ -19,8 +19,22 @@ conda install -c conda-forge jupyter jupyterlab
 #wget -P ./parsing_model/checkpoint https://github.com/neuralchen/SimSwap/releases/download/1.0/79999_iter.pth
 #wget --no-check-certificate "https://sh23tw.dm.files.1drv.com/y4mmGiIkNVigkSwOKDcV3nwMJulRGhbtHdkheehR5TArc52UjudUYNXAEvKCii2O5LAmzGCGK6IfleocxuDeoKxDZkNzDRSt4ZUlEt8GlSOpCXAFEkBwaZimtWGDRbpIGpb_pz9Nq5jATBQpezBS6G_UtspWTkgrXHHxhviV2nWy8APPx134zOZrUIbkSF6xnsqzs3uZ_SEX_m9Rey0ykpx9w" -O antelope.zip
 #unzip ./antelope.zip -d ./insightface_func/models/
-conda install -c apple tensorflow-deps==2.5.0
+
 python3 -m pip install --ignore-installed imageio
+python3 -m pip install --ignore-installed numpy
+python3 -m pip install --ignore-installed wrapt
+python3 -m pip install --ignore-installed flatbuffers
+python3 -m pip install --ignore-installed google-pasta
+python3 -m pip install --ignore-installed h5py
+python3 -m pip install --ignore-installed keras-nightly
+python3 -m pip install --ignore-installed keras-preprocessing
+python3 -m pip install --ignore-installed tensorflow-estimator
+python3 -m pip install --ignore-installed termcolor
+python3 -m pip install --ignore-installed absl
+python3 -m pip install --ignore-installed gast
+python3 -m pip install --ignore-installed grpcio
+python3 -m pip install --ignore-installed typing-extentions
+python3 -m pip install --ignore-installed astunparse
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install onnxruntime-gpu
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
@@ -45,6 +59,7 @@ python3 -m pip install gast==0.4.0
 python3 -m pip install grpcio==1.34.0
 python3 -m pip install typing-extensions==3.7.4
 python3 -m pip install astunparse==1.6.3
+conda install -c apple tensorflow-deps==2.5.0
 python3 -m pip install tensorflow-macos==2.5.0
 python3 -m pip install tensorflow-macos==2.5.0 --no-dependencies
 python3 -m pip install tensorflow-metal==0.1.2
