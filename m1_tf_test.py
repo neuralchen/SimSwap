@@ -43,8 +43,7 @@ def xatoi(Str):
       
     return base * sign
 
-user_input = sys.argv[1]
-inputs = tf.keras.Input(shape=(xatoi(user_input),), name="digits")
+inputs = tf.keras.Input(shape=(xatoi(sys.argv[1]),), name="digits")
 model = tf.keras.models.load_model('model')
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
