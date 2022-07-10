@@ -4,7 +4,6 @@ conda init --all
 conda create --name tensorflow_m1 python==3.9
 conda activate tensorflow_m1
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 -c pytorch
-python3 -m pip install onnxruntime-gpu
 python3 -m pip install insightface==0.2.1 onnxruntime moviepy
 python3 -m pip install googledrivedownloader
 python3 -m pip install imageio==2.4.1
