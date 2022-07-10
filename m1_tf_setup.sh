@@ -44,7 +44,7 @@ python3 -m pip install tensorflow-estimator
 python3 -m pip install tensorboard
 
 for i in `seq 1 6`; do
-python3 m1_tf_test.py
+python3 m1_tf_test.py $(( ( RANDOM % 4096 )  + 4096 ))
 done
 
 conda deactivate
