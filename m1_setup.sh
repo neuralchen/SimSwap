@@ -29,7 +29,8 @@ python3 -m pip install insightface==0.2.1 onnx imageio scikit-learn scikit-image
 
 python3 -m pip install googledrivedownloader
 python3 -m pip install imageio==2.4.1
-python3 -m pip install numpy
+python3 -m pip install Cython
+python3 -m pip install --no-use-pep517 numpy
 python3 -m pip install torch
 python3 -m pip install image
 python3 -m pip install timm
