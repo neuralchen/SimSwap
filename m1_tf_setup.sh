@@ -43,7 +43,9 @@ python3 -m pip install tensorflow-metal
 python3 -m pip install tensorflow-estimator
 python3 -m pip install tensorboard
 
+for i in `seq 1 6`; do
 python3 m1_tf_test.py
+done
 
 conda deactivate
 
