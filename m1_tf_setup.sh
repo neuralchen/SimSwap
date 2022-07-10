@@ -19,7 +19,7 @@ python3 -m pip install insightface==0.2.1 moviepy
 python3 -m pip install googledrivedownloader
 python3 -m pip install imageio==2.4.1
 python3 -m pip install Cython
-python3 -m pip install --no-use-pep517 numpy==1.21.2
+python3 -m pip install --no-use-pep517 numpy==1.19.3
 python3 -m pip install torch
 python3 -m pip install image
 python3 -m pip install timm
