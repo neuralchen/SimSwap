@@ -33,7 +33,7 @@ model.compile(optimizer='adam',
  loss=loss_fn,
  metrics=['accuracy'])
 model.fit(x_test, y_test, epochs=10)
-outputs = tf.keras.layers.Dense(4, activation="softmax", name="predictions")(x_test)
+outputs = tf.keras.layers.Dense(4, activation='softmax', name='predictions')((x_test,y_test))
 model = tf.keras.Model(inputs=inputs, outputs=outputs)
 model.build()
 model.save('model')
