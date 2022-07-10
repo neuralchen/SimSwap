@@ -1,4 +1,10 @@
 #!/bin/bash
+export HOMEBREW_BREW_GIT_REMOTE="https://github.com/Homebrew/brew"  # put your Git mirror of Homebrew/brew here
+export HOMEBREW_CORE_GIT_REMOTE="https://github.com/Homebrew/homebrew-core"  # put your Git mirror of Homebrew/homebrew-core here
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
 
 conda init --all
 conda create --name tensorflow_m1 python==3.9
@@ -20,7 +26,7 @@ python3 -m pip install h5py
 python3 -m pip install keras-nightly==2.10.0.dev2022071007
 python3 -m pip install keras-preprocessing==1.1.2
 python3 -m pip install termcolor==1.1.0
-python3 -m pip install absl-py==0.10
+python3 -m pip install absl-py
 python3 -m pip install gast==0.4.0
 python3 -m pip install grpcio
 python3 -m pip install typing-extensions==3.7.4
@@ -28,8 +34,8 @@ python3 -m pip install astunparse==1.6.3
 conda install -c apple tensorflow-deps
 python3 -m pip install tensorflow-macos
 python3 -m pip install tensorflow-metal==0.1.2
-python3 -m pip install tensorflow-estimator<2.6.0,>=2.5.0rc0
-python3 -m pip install tensorboard<1.13.0,>=1.12.0
+python3 -m pip install tensorflow-estimator==2.5.0rc0
+python3 -m pip install tensorboard==1.12.0
 
 python3 m1_tf_test.py
 
