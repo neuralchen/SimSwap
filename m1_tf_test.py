@@ -27,4 +27,4 @@ model.compile(optimizer='adam',
 model.fit(x_train, y_train, epochs=10)
 model.build()
 model.summary()
-sys.exit()
+
