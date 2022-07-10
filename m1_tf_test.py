@@ -10,6 +10,7 @@ import sys
 import tensorflow as tf
 tf.__version__
 tf.config.list_physical_devices()
+from random import randrange
 
 def xatoi(Str):
   
@@ -43,14 +44,13 @@ def xatoi(Str):
     return base * sign
 
 user_input = sys.argv[1]
-logits = [[4.0, 2.0, 1.0], [0.0, 5.0, 1.0]]
 inputs = tf.keras.Input(shape=(xatoi(user_input),), name="digits")
 model = tf.keras.models.load_model('model')
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-x_train, x_test = x_train / 255.0, x_test / 255.0
+x_train, x_test = x_train / randrange(255), x_test / randrange(255)
 model = tf.keras.models.Sequential([
- tf.keras.layers.Flatten(input_shape=(28, 28)),
+ tf.keras.layers.Flatten(input_shape=(randrange(255), randrange(255))),
  tf.keras.layers.Dense(128,activation='selu',name='layer1'),
  tf.keras.layers.Dropout(0.2),
  tf.keras.layers.Dense(64,activation='relu',name='layer2'),
