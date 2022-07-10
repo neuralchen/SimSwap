@@ -5,7 +5,6 @@
 # Created Date: Saturday July 9th 2022
 # Author: Smiril
 # Email: sonar@gmx.com
-# Original: https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c
 #############################################################
 import tensorflow as tf
 tf.__version__
@@ -17,10 +16,14 @@ model = tf.keras.models.Sequential([
  tf.keras.layers.Flatten(input_shape=(28, 28)),
  tf.keras.layers.Dense(128, activation='relu'),
  tf.keras.layers.Dropout(0.2),
- tf.keras.layers.Dense(10)
+ tf.keras.layers.Dense(10),
+ tf.keras.layers.Dense(2,activation=tf.nn.softmax)
 ])
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 model.compile(optimizer='adam',
  loss=loss_fn,
  metrics=['accuracy'])
-model.fit(x_train, y_train, epochs=10)
+model.fit(x_train, y_train, epochs=100)
+model.build()
+model.summary()
+
