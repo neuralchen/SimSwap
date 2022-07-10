@@ -20,6 +20,7 @@ python3 -m pip install h5py
 python3 -m pip install keras-nightly==2.10.0.dev2022071007
 python3 -m pip install keras-preprocessing==1.1.2
 python3 -m pip install tensorflow-estimator<2.6.0,>=2.5.0rc0
+python3 -m pip install tensorboard<1.13.0,>=1.12.0
 python3 -m pip install termcolor==1.1.0
 python3 -m pip install absl-py==0.10
 python3 -m pip install gast==0.4.0
