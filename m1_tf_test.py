@@ -93,7 +93,6 @@ model.compile(optimizer='adam', loss=loss_fn, metrics=['accuracy'])
 these = model.fit(x_train, y_train, epochs=10).history
 that = ComputeSum(len(these))
 those = that(these)
-outputs = tf.keras.layers.Dense(4, activation='softmax', name='predictions')(those)
 model = ComputeSumModel((tf.shape(these)[1],))
 model = tf.keras.Model(inputs=inputs, outputs=outputs)
 model.build()
