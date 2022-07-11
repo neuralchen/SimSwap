@@ -89,7 +89,6 @@ model = tf.keras.models.Sequential([
  tf.keras.layers.Dropout(0.2)
 ])
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-model.add(LSTM(1, input_shape=(10, 1)))
 model.compile(optimizer='adam', loss=loss_fn, metrics=['accuracy'])
 these = model.fit(x_train, y_train, epochs=10).history
 that = ComputeSum(len(these))
