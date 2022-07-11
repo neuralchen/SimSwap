@@ -31,13 +31,13 @@ class ComputeSum(Layer):
         n = len(data)
         return n
 
-def ComputeSumModel(input_shape):
-    inputs = Input(shape = input_shape)
-    outputs = ComputeSum(input_shape[0])(inputs)
+  def ComputeSumModel(input_shape):
+      inputs = Input(shape = input_shape)
+      outputs = ComputeSum(input_shape[0])(inputs)
     
-    model = tf.keras.Model(inputs = inputs, outputs = outputs)
+      model = tf.keras.Model(inputs = inputs, outputs = outputs)
 
-    return model
+      return model
 
 def xatoi(Str):
   
@@ -89,10 +89,8 @@ model = tf.keras.models.Sequential([
  tf.keras.layers.Dropout(0.2)
 ])
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-model.add(LSTM(self,32, input_shape=(1024, )))
-model.compile(optimizer='adam',
- loss=loss_fn,
- metrics=['accuracy'])
+model.add(LSTM(28, input_shape=(10, 1)))
+model.compile(optimizer='adam', loss=loss_fn, metrics=['accuracy'])
 these = model.fit(x_train, y_train, epochs=10).history
 that = ComputeSum(len(these))
 those = that(these)
