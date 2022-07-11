@@ -19,7 +19,7 @@ class ComputeSum(Layer):
 
   def __init__(self, input_dim):
       super(ComputeSum, self).__init__()
-      # Create a non-trainable weight.
+      # Create a trainable weight.
       self.total = tf.Variable(initial_value=tf.zeros((input_dim,)),
                                trainable=True)
 
