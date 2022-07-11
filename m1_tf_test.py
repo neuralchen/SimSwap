@@ -89,7 +89,7 @@ model = tf.keras.models.Sequential([
  tf.keras.layers.Dropout(0.2)
 ])
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-model.add(LSTM(32, input_shape=(1024, )))
+model.add(LSTM(self,32, input_shape=(1024, )))
 model.compile(optimizer='adam',
  loss=loss_fn,
  metrics=['accuracy'])
