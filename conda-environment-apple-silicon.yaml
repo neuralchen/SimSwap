@@ -13,7 +13,7 @@ dependencies:
     - tensorflow-metal
     - tqdm>=4.64
     - psutil>=5.8.0
-    - --no-use-pep517 numpy>=1.18.0
+    - numpy>=1.18.0
     - opencv-python>=4.5.5.0
     - pillow>=8.3.1
     - scikit-learn>=1.0.2
