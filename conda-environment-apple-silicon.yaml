@@ -1,0 +1,50 @@
+name: torch-m1
+channels:
+  - conda-forge
+  - apple
+dependencies:
+  - python>=3.9
+  - pip
+  - tensorflow-deps<=2.9.1
+  - tk
+  - libblas
+  - pip:
+    - tensorflow-macos==2.9.1
+    - tensorflow-metal
+    - tqdm>=4.64
+    - psutil>=5.8.0
+    - --no-use-pep517 numpy>=1.18.0
+    - opencv-python>=4.5.5.0
+    - pillow>=8.3.1
+    - scikit-learn>=1.0.2
+    - imageio
+    - image
+    - timm
+    - PlL
+    - wrapt
+    - scikit-image
+    - moviepy
+    - Cython
+    - flatbuffers
+    - google-pasta
+    - h5py
+    - opt_einsum
+    - keras-nightly
+    - keras-preprocessing
+    - termcolor
+    - absl-py
+    - gast==0.4.0
+    - grpcio
+    - typing-extensions
+    - astunparse
+    - fastcluster>=1.2.4
+    - matplotlib>=3.5.1
+    - imageio>=2.9.0
+    - imageio-ffmpeg>=0.4.7
+    - ffmpy==0.2.3
+    - imageio==2.9.0
+    - torch==1.8.0
+    - torchvision==0.9.0
+    - insightface==0.2.1
+    - ipython==7.21.0
+    - Pillow==8.3.1
