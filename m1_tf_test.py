@@ -9,8 +9,8 @@
 import sys
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.layers import Layer, Input
-from tensorflow.keras.models import LSTM
+from tensorflow.keras.layers import Layer, Input, LSTM
+from tensorflow.keras.models import *
 tf.__version__
 tf.config.list_physical_devices()
 from random import randrange
