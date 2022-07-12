@@ -89,7 +89,7 @@ class BaseOptions():
            else:
              print("ERROR")
         else:
-          mps_device = torch.device("mps")
+          torch.device("mps")
 
         args = vars(self.opt)
 
