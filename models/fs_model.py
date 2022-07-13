@@ -48,7 +48,7 @@ class fsModel(BaseModel):
             torch.backends.cudnn.benchmark = True
         self.isTrain = opt.isTrain
 
-          if not torch.backends.mps.is_available():
+        if not torch.backends.mps.is_available():
            if not torch.backends.mps.is_built():
              device = torch.device("cuda:0")
            else:
