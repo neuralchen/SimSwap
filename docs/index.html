@@ -150,19 +150,19 @@
                 <h3>Single Face Video Swap</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row select-show">
             <div class="col-md-12">
                 <div class="col-md-3 which-image-container">
                     <div class="which-image" id=anni>
                         <img src="./img/id/anni.jpg" onclick="select_source(0)" />
                     </div>
                     <div class="which-image" id=chenglong>
-                        <img src="./img/id/chenglong.jpg" onclick="select_source(1)" />
+                        <img src="./img/id/zhoujielun.jpg" onclick="select_source(1)" />
                     </div>
                 </div>
                 <div class="col-md-3 which-image-container">
                     <div class="which-image" id=zhoujielun>
-                        <img src="./img/id/zhoujielun.jpg" onclick="select_source(2)" />
+                        <img src="./img/id/chenglong.jpg" onclick="select_source(2)" />
                     </div>
                     <div class="which-image" id=zhuyin>
                         <img src="./img/id/zhuyin.jpg" onclick="select_source(3)" />
@@ -172,11 +172,23 @@
                     <img id=jiroujinlun src="./img/anni.webp" />
                 </div>
             </div>
-
-
-            <!-- <img width=24% src="./img/chenglong.webp" />
-            <img width=24% src="./img/zhoujielun.webp" />
-            <img width=24% src="./img/zhuyin.webp" /> -->
+        </div>
+        <div class="row select-show" style="margin-top: 10px;">
+            <div class="col-md-12">
+                <div class="col-md-3 which-image-container">
+                    <div class="which-image" id=Iron_man>
+                        <img src="./img/id/Iron_man.jpg" onclick="select_source2(0)" />
+                    </div>
+                </div>
+                <div class="col-md-3 which-image-container">
+                    <div class="which-image" id=wuyifan>
+                        <img src="./img/id/wuyifan.png" onclick="select_source2(1)" />
+                    </div>
+                </div>
+                <div class="col-md-6 image-display2">
+                    <img id=mama src="./img/mama_mask_short.webp" />
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-*">
@@ -319,6 +331,15 @@
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        document.getElementById('Iron_man').style.borderWidth = '5px';
+        document.getElementById('Iron_man').style.borderColor = 'red';
+        document.getElementById('Iron_man').style.borderStyle = 'outset';
+
+        document.getElementById('anni').style.borderWidth = '5px';
+        document.getElementById('anni').style.borderColor = 'red';
+        document.getElementById('anni').style.borderStyle = 'outset';
+    </script>
 </body>
 
 </html>
