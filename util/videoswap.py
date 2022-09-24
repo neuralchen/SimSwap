@@ -6,7 +6,8 @@ LastEditors: Naiyuan liu
 LastEditTime: 2021-11-24 19:19:52
 Description: 
 '''
-import os 
+import os
+os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/bin/ffmpeg"
 import cv2
 import glob
 import torch
