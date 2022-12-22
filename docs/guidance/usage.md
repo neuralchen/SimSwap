@@ -98,18 +98,19 @@ Difference between using mask and not using mask can be found [here](https://img
 
 
 ### Parameters
-|  Parameters   | Function  |
-|  :----  | :----  |
-| --name  | The SimSwap training logs name |
-| --pic_a_path  | Path of image with the target face |
-| --pic_b_path  | Path of image with the source face to swap |
-| --pic_specific_path  | Path of image with the specific face to be swapped |
-|--multisepcific_dir  |Path of image folder for multi specific face swapping|
-| --video_path  | Path of video with the source face to swap |
-| --temp_path  | Path to store intermediate files  |
-| --output_path  | Path of directory to store the face swapping result  |
-| --no_simswaplogo  |The hyper parameter to control whether to remove watermark |
-| --use_mask  |The hyper parameter to control whether to use face parsing for the better visual effects(I recommend to use)|
+| Parameters | Function |
+| :---- | :---- |
+| --name | The SimSwap training logs name |
+| --pic_a_path | Path of image with the target face |
+| --pic_b_path | Path of image with the source face to swap |
+| --pic_specific_path | Path of image with the specific face to be swapped |
+| --multisepcific_dir |Path of image folder for multi specific face swapping |
+| --video_path | Path of video with the source face to swap |
+| --temp_path | Path to store intermediate files |
+| --output_path | Path of directory to store the face swapping result  |
+| --no_simswaplogo | The hyper parameter to control whether to remove watermark |
+| --use_mask | The hyper parameter to control whether to use face parsing for the better visual effects(I recommend to use) |
+| --skip_existing_frames | Skip frame index if already exist in temp_path (will not compare if the same video) |
 
 ### Note
 We expect users to have GPU with at least 3G memory.the For those who do not, we will provide Colab Notebook implementation in the future.

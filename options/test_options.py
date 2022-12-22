@@ -34,5 +34,6 @@ class TestOptions(BaseOptions):
         self.parser.add_argument('--no_simswaplogo', action='store_true', help='Remove the watermark')
         self.parser.add_argument('--use_mask', action='store_true', help='Use mask for better result')
         self.parser.add_argument('--crop_size', type=int, default=224, help='Crop of size of input image')
+        self.parser.add_argument('--skip_existing_frames', action='store_true', help='Skip frame index if already exist in temp_path')
         
         self.isTrain = False
