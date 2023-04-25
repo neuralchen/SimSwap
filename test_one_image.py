@@ -83,4 +83,4 @@ if __name__ == '__main__':
 
         output = output*255
 
-        cv2.imwrite(opt.output_path + 'result.jpg',output)
+        cv2.imwrite(opt.output_path + 'result.jpg', output)
