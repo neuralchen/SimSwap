@@ -20,7 +20,7 @@ def _totensor(array):
     img = tensor.transpose(0, 1).transpose(0, 2).contiguous()
     return img.float().div(255)
 
-def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_model, detect_model, save_path, temp_results_dir='./temp_results', crop_size=224, no_simswaplogo = False,use_mask =False):
+def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_model, detect_model, save_path, temp_results_dir='./temp_results', crop_size=224, no_simswaplogo = False, use_mask =False, skip_existing_frames = False):
     video_forcheck = VideoFileClip(video_path)
     if video_forcheck.audio is None:
         no_audio = True
@@ -44,8 +44,8 @@ def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_mod
     # video_HEIGHT = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
     
     fps = video.get(cv2.CAP_PROP_FPS)
-    if  os.path.exists(temp_results_dir):
-            shutil.rmtree(temp_results_dir)
+    if not skip_existing_frames and os.path.exists(temp_results_dir):
+        shutil.rmtree(temp_results_dir)
 
     spNorm =SpecificNorm()
     mse = torch.nn.MSELoss().cuda()
@@ -60,16 +60,21 @@ def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_mod
     else:
         net =None
 
+    if not os.path.exists(temp_results_dir):
+        os.mkdir(temp_results_dir)
+    
     # while ret:
     for frame_index in tqdm(range(frame_count)): 
         ret, frame = video.read()
+
+        if skip_existing_frames and os.path.exists(os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index))):
+            continue
+        
         if  ret:
             detect_results = detect_model.get(frame,crop_size)
 
             if detect_results is not None:
                 # print(frame_index)
-                if not os.path.exists(temp_results_dir):
-                        os.mkdir(temp_results_dir)
                 frame_align_crop_list = detect_results[0]
                 frame_mat_list = detect_results[1]
 
@@ -97,16 +102,12 @@ def video_swap(video_path, id_vetor,specific_person_id_nonorm,id_thres, swap_mod
                     reverse2wholeimage([frame_align_crop_tenor_list[min_index]], [swap_result], [frame_mat_list[min_index]], crop_size, frame, logoclass,\
                         os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)),no_simswaplogo,pasring_model =net,use_mask= use_mask, norm = spNorm)
                 else:
-                    if not os.path.exists(temp_results_dir):
-                        os.mkdir(temp_results_dir)
                     frame = frame.astype(np.uint8)
                     if not no_simswaplogo:
                         frame = logoclass.apply_frames(frame)
                     cv2.imwrite(os.path.join(temp_results_dir, 'frame_{:0>7d}.jpg'.format(frame_index)), frame)
 
             else:
-                if not os.path.exists(temp_results_dir):
-                    os.mkdir(temp_results_dir)
                 frame = frame.astype(np.uint8)
                 if not no_simswaplogo:
                     frame = logoclass.apply_frames(frame)
