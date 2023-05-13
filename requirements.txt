@@ -1,0 +1,11 @@
+jupyter
+autopep8
+sets
+isort
+Pillow
+insightface==0.2.1 
+onnxruntime 
+moviepy
+imageio==2.4.1
+numpy==1.19.5
+lpips

@@ -188,6 +188,21 @@ For academic and non-commercial use only.The whole project is under the CC-BY-NC
 
 [![logo](./docs/img/vggface2_hq_compare.png)](https://github.com/NNNNAI/VGGFace2-HQ)
 
+## Installation
+
+```bash
+# Git clone
+git clone <repo>
+# Download weights
+bash download_weights.sh
+# Build Docker file
+docker build -t simswap .
+# Run docker file
+docker run -it -v <local path of simpSwap Git>:/simpswap --gpus=all -p 8888:8888 simswap:latest
+# Access jupyter notebook
+http://localhost:8888/tree/simpswap
+```
+
 Learn about our other projects 
 
 [[VGGFace2-HQ]](https://github.com/NNNNAI/VGGFace2-HQ);
