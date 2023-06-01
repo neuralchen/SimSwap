@@ -13,7 +13,12 @@ The high resolution version of ***SimSwap-HQ*** is supported!
 
 [![simswaplogo](/docs/img/logo1.png)](https://github.com/neuralchen/SimSwap)
 
-Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) [[ACM DOI]](https://dl.acm.org/doi/10.1145/3394171.3413630) 
+Our paper can be downloaded from [[Arxiv]](https://arxiv.org/pdf/2106.06340v1.pdf) [[ACM DOI]](https://dl.acm.org/doi/10.1145/3394171.3413630)
+
+
+### This project also received support from [SocialBook](https://socialbook.io).
+<!-- [![logo](./simswaplogo/socialbook_logo.2020.357eed90add7705e54a8.svg)](https://socialbook.io) -->
+<img width=30% src="./simswaplogo/socialbook_logo.2020.357eed90add7705e54a8.svg"/>
 
 <!-- [[Google Drive]](https://drive.google.com/file/d/1fcfWOGt1mkBo7F0gXVKitf8GJMAXQxZD/view?usp=sharing) 
 [[Baidu Drive ]](https://pan.baidu.com/s/1-TKFuycRNUKut8hn4IimvA) Password: ```ummt``` -->
@@ -53,9 +58,7 @@ If you find this project useful, please star it. It is the greatest appreciation
 [![logo](./docs/img/vggface2_hq_compare.png)](https://github.com/NNNNAI/VGGFace2-HQ)
 
 
-## This project also received support from [SocialBook](https://socialbook.io).
-<!-- [![logo](./simswaplogo/socialbook_logo.2020.357eed90add7705e54a8.svg)](https://socialbook.io) -->
-<img width=30% src="./simswaplogo/socialbook_logo.2020.357eed90add7705e54a8.svg"/>
+
 
 ## Dependencies
 - python3.6+
