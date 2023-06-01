@@ -7,13 +7,9 @@ from .config import device, num_classes
 
 
 def create_model(opt):
-    if opt.model == 'pix2pixHD':
-        #from .pix2pixHD_model import Pix2PixHDModel, InferenceModel
-        from .fs_model import fsModel
-        model = fsModel()
-    else:
-        from .ui_model import UIModel
-        model = UIModel()
+    #from .pix2pixHD_model import Pix2PixHDModel, InferenceModel
+    from .fs_model import fsModel
+    model = fsModel()
 
     model.initialize(opt)
     if opt.verbose:

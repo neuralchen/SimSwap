@@ -52,6 +52,11 @@ If you find this project useful, please star it. It is the greatest appreciation
 
 [![logo](./docs/img/vggface2_hq_compare.png)](https://github.com/NNNNAI/VGGFace2-HQ)
 
+
+## This project also received support from [SocialBook](https://socialbook.io).
+<!-- [![logo](./simswaplogo/socialbook_logo.2020.357eed90add7705e54a8.svg)](https://socialbook.io) -->
+<img width=30% src="./simswaplogo/socialbook_logo.2020.357eed90add7705e54a8.svg"/>
+
 ## Dependencies
 - python3.6+
 - pytorch1.5+

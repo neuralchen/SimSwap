@@ -59,9 +59,6 @@ class fsModel(BaseModel):
         self.netG = Generator_Adain_Upsample(input_nc=3, output_nc=3, latent_size=512, n_blocks=9, deep=False)
         self.netG.to(device)
 
-
-
-
         # Id network
         netArc_checkpoint = opt.Arc_path
         netArc_checkpoint = torch.load(netArc_checkpoint, map_location=torch.device("cpu"))

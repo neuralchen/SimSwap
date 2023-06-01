@@ -24,7 +24,7 @@ class TestOptions(BaseOptions):
         self.parser.add_argument("--onnx", type=str, help="run ONNX model via TRT")        
         self.parser.add_argument("--Arc_path", type=str, default='arcface_model/arcface_checkpoint.tar', help="run ONNX model via TRT")
         self.parser.add_argument("--pic_a_path", type=str, default='G:/swap_data/ID/elon-musk-hero-image.jpeg', help="Person who provides identity information")
-        self.parser.add_argument("--pic_b_path", type=str, default='G:/swap_data/ID/bengio.jpg', help="Person who provides information other than their identity")
+        self.parser.add_argument("--pic_b_path", type=str, default='./demo_file/multi_people.jpg', help="Person who provides information other than their identity")
         self.parser.add_argument("--pic_specific_path", type=str, default='./crop_224/zrf.jpg', help="The specific person to be swapped")
         self.parser.add_argument("--multisepcific_dir", type=str, default='./demo_file/multispecific', help="Dir for multi specific")
         self.parser.add_argument("--video_path", type=str, default='G:/swap_data/video/HSB_Demo_Trim.mp4', help="path for the video to swap")
@@ -33,6 +33,6 @@ class TestOptions(BaseOptions):
         self.parser.add_argument('--id_thres', type=float, default=0.03, help='how many test images to run')
         self.parser.add_argument('--no_simswaplogo', action='store_true', help='Remove the watermark')
         self.parser.add_argument('--use_mask', action='store_true', help='Use mask for better result')
-        self.parser.add_argument('--crop_size', type=int, default=224, help='Crop of size of input image')
+        self.parser.add_argument('--crop_size', type=int, default=512, help='Crop of size of input image')
         
         self.isTrain = False
