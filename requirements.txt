@@ -1,0 +1,12 @@
+# python=3.6
+
+#cudatoolkit==10.2.89
+imageio==2.9.0 			# 06.07.2020
+insightface==0.2.1
+moviepy==1.0.2
+numpy==1.19.1 			# 21.06.2020
+onnxruntime==1.6.0 		# 10.12.2020
+#pytorch==1.0.2
+scikit-image==0.18.1 	# 23.12.2020
+torchaudio==0.8.0
+torchvision==0.9.0
