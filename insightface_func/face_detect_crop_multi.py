@@ -62,7 +62,6 @@ class Face_detect_crop:
 
     def get(self, img, crop_size, max_num=0):
         bboxes, kpss = self.det_model.detect(img,
-                                             threshold=self.det_thresh,
                                              max_num=max_num,
                                              metric='default')
         if bboxes.shape[0] == 0:
