@@ -95,7 +95,7 @@ For faster convergence and better results, a large batch size (more than 16) is 
 python train.py --name simswap224_test --batchSize 8  --gpu_ids 0 --dataset /path/to/VGGFace2HQ --Gdeep False
 ```
 
-[Colab demo for training 224 model](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb) 
+[Colab demo for training 224 model][ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb)
 
 For faster convergence and better results, a large batch size (more than 16) is recommended!
 
@@ -115,7 +115,7 @@ python train.py --name simswap512_test  --batchSize 16  --gpu_ids 0 --dataset /p
 
 <div style="background: yellow; width:140px; font-weight:bold;font-family: sans-serif;">Stronger feature</div>
 
-[Colab for switching specific faces in multi-face videos](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb) 
+[Colab for switching specific faces in multi-face videos][ <a href="https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/train.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/github/neuralchen/SimSwap/blob/main/MultiSpecific.ipynb)
 
 [Image face swapping demo & Docker image on Replicate](https://replicate.ai/neuralchen/simswap-image)
 
