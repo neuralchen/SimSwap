@@ -63,7 +63,7 @@ class SwappingDataset(data.Dataset):
 
     def preprocess(self):
         """Preprocess the Swapping dataset."""
-        print("processing Swapping dataset images...")
+        #print("processing Swapping dataset images...")
 
         temp_path   = os.path.join(self.image_dir,'*/')
         pathes      = glob.glob(temp_path)
