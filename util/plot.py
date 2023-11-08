@@ -35,3 +35,19 @@ def plot_batch(X, out_path):
     canvas = tile(X, rows, cols)
     canvas = np.squeeze(canvas)
     PIL.Image.fromarray(canvas).save(out_path)
+
+def plot_batch_wandb(X):
+    """Save batch of images tiled."""
+    n_channels = X.shape[3]
+    if n_channels > 3:
+        X = X[:,:,:,np.random.choice(n_channels, size = 3)]
+    X = postprocess(X)
+    rc = math.sqrt(X.shape[0])
+    rows = cols = math.ceil(rc)
+    canvas = tile(X, rows, cols)
+    canvas = np.squeeze(canvas)
+    print(canvas.shape)
+    print(rows, cols)
+    canvas = canvas[:2016, :2016,:]
+    # canvas = cv2.resize(canvas, None, fx=0.5, fy=0.5)
+    return canvas
