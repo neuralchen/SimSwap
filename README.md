@@ -169,7 +169,7 @@ At the same time, if you have suggestions for our project, please feel free to a
 For academic and non-commercial use only.The whole project is under the CC-BY-NC 4.0 license. See [LICENSE](https://github.com/neuralchen/SimSwap/blob/main/LICENSE) for additional details.
 
 
-## To cite our paper
+## To cite our papers
 ```
 @inproceedings{DBLP:conf/mm/ChenCNG20,
   author    = {Renwang Chen and
@@ -179,6 +179,22 @@ For academic and non-commercial use only.The whole project is under the CC-BY-NC
   title     = {SimSwap: An Efficient Framework For High Fidelity Face Swapping},
   booktitle = {{MM} '20: The 28th {ACM} International Conference on Multimedia},
   year      = {2020}
+}
+```
+```
+@Article{simswapplusplus,
+    author = {Xuanhong Chen and
+    Bingbing Ni and
+    Yutian Liu and
+    Naiyuan Liu and
+    Zhilin Zeng and
+    Hang Wang},
+    title = {SimSwap++: Towards Faster and High-Quality Identity Swapping},
+    journal = {{IEEE} Trans. Pattern Anal. Mach. Intell.},
+    volume = {46},
+    number = {1},
+    pages = {576--592},
+    year = {2024}
 }
 ```
 
