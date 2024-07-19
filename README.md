@@ -183,18 +183,18 @@ For academic and non-commercial use only.The whole project is under the CC-BY-NC
 ```
 ```
 @Article{simswapplusplus,
-    author = {Xuanhong Chen and
-    Bingbing Ni and
-    Yutian Liu and
-    Naiyuan Liu and
-    Zhilin Zeng and
-    Hang Wang},
-    title = {SimSwap++: Towards Faster and High-Quality Identity Swapping},
+    author  = {Xuanhong Chen and
+              Bingbing Ni and
+              Yutian Liu and
+              Naiyuan Liu and
+              Zhilin Zeng and
+              Hang Wang},
+    title   = {SimSwap++: Towards Faster and High-Quality Identity Swapping},
     journal = {{IEEE} Trans. Pattern Anal. Mach. Intell.},
-    volume = {46},
-    number = {1},
-    pages = {576--592},
-    year = {2024}
+    volume  = {46},
+    number  = {1},
+    pages   = {576--592},
+    year    = {2024}
 }
 ```
 
