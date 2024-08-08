@@ -154,9 +154,9 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
         # target_image_parsing = postprocess(target_image, source_image, tgt_mask)
 
         if use_mask:
-            target_image = np.array(target_image, dtype=np.float) * 255
+            target_image = np.array(target_image, dtype=np.float32) * 255
         else:
-            target_image = np.array(target_image, dtype=np.float)[..., ::-1] * 255
+            target_image = np.array(target_image, dtype=np.float32)[..., ::-1] * 255
 
 
         img_mask_list.append(img_mask)
@@ -165,7 +165,7 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
 
     # target_image /= 255
     # target_image = 0
-    img = np.array(oriimg, dtype=np.float)
+    img = np.array(oriimg, dtype=np.float32)
     for img_mask, target_image in zip(img_mask_list, target_image_list):
         img = img_mask * target_image + (1-img_mask) * img
         
