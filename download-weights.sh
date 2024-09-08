@@ -7,3 +7,5 @@ wget --no-check-certificate "https://sh23tw.dm.files.1drv.com/y4mmGiIkNVigkSwOKD
 mkdir -p insightface_func/models
 unzip ./antelope.zip -d ./insightface_func/models/
 rm antelope.zip
+wget -P ./parsing_model/checkpoint https://github.com/neuralchen/SimSwap/releases/download/1.0/79999_iter.pth
+
