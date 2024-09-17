@@ -24,7 +24,8 @@ import torch.nn as nn
 from util.norm import SpecificNorm
 import glob
 from parsing_model.model import BiSeNet
-
+import warnings
+warnings.filterwarnings("ignore")
 def lcm(a, b): return abs(a * b) / fractions.gcd(a, b) if a and b else 0
 
 transformer_Arcface = transforms.Compose([
